@@ -1,0 +1,9 @@
+{
+  "name": "Esthien",
+  "short_name": "Esthien",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050608",
+  "theme_color": "#050608",
+  "icons": []
+}
