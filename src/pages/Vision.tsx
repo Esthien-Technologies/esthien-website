@@ -6,7 +6,7 @@ const philosophy = [
   "The next class of intelligent systems will be judged by how reliably they operate in the physical world, not by how impressive they appear in isolation.",
   "That requires more than models. It requires sensors, FPGA fabric, edge inference, timing, control, power, and failure behavior to move together.",
   "A machine earns trust when it responds on time. In physical systems, a late decision can become indistinguishable from a wrong one.",
-  "Esthien's first technical direction is chipset architecture for medical assistive systems and automotive sensing, where motion and safety depend on deterministic hardware.",
+  "Esthien Labs' first technical direction is chipset architecture for medical assistive systems and automotive sensing, where motion and safety depend on deterministic hardware.",
 ];
 
 export default function Vision() {

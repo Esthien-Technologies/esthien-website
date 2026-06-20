@@ -4,14 +4,22 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   build: {
-    sourcemap: true,
+    sourcemap: false,
     rollupOptions: {
       output: {
-        manualChunks: {
-          react: ["react", "react-dom", "react-router-dom"],
-          motion: ["gsap", "lenis"],
-          three: ["three"],
-          icons: ["lucide-react"],
+        manualChunks(id) {
+          if (id.includes("node_modules/react") || id.includes("node_modules/react-dom") || id.includes("node_modules/react-router-dom")) {
+            return "react";
+          }
+          if (id.includes("node_modules/gsap") || id.includes("node_modules/lenis")) {
+            return "motion";
+          }
+          if (id.includes("node_modules/three")) {
+            return "three";
+          }
+          if (id.includes("node_modules/lucide-react")) {
+            return "icons";
+          }
         },
       },
     },

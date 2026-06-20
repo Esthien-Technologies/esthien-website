@@ -1,45 +1,106 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import * as THREE from "three";
 
-const vertexShader = `
-  uniform float uTime;
-  uniform vec2 uMouse;
-  attribute float aSize;
-  attribute float aPhase;
-  varying float vDepth;
+type LatticeData = {
+  lines: Float32Array;
+  points: Float32Array;
+  accents: Float32Array;
+};
 
-  void main() {
-    vec3 p = position;
-    float wave = sin((p.x * 0.82) + (p.y * 0.34) + uTime + aPhase) * 0.15;
-    float pull = distance(p.xy, uMouse) * 0.03;
-    p.z += wave - pull;
-    vec4 mvPosition = modelViewMatrix * vec4(p, 1.0);
-    gl_PointSize = aSize * (310.0 / -mvPosition.z);
-    gl_Position = projectionMatrix * mvPosition;
-    vDepth = smoothstep(-4.0, 4.0, p.z);
+const createRandom = (seed = 132344254) => {
+  let value = seed;
+
+  return () => {
+    value = (value * 1664525 + 1013904223) % 4294967296;
+    return value / 4294967296;
+  };
+};
+
+const buildLattice = (): LatticeData => {
+  const random = createRandom();
+  const columns = 16;
+  const rows = 9;
+  const layers = 3;
+  const width = 9.2;
+  const height = 5.2;
+  const depth = 2.6;
+  const nodes: number[][] = [];
+
+  for (let z = 0; z < layers; z += 1) {
+    for (let y = 0; y < rows; y += 1) {
+      for (let x = 0; x < columns; x += 1) {
+        const px = (x / (columns - 1) - 0.5) * width + (random() - 0.5) * 0.14;
+        const py = (y / (rows - 1) - 0.5) * height + (random() - 0.5) * 0.14;
+        const pz = (z / (layers - 1) - 0.5) * depth;
+        nodes.push([px, py, pz]);
+      }
+    }
   }
-`;
 
-const fragmentShader = `
-  varying float vDepth;
+  const index = (x: number, y: number, z: number) => z * rows * columns + y * columns + x;
+  const lines: number[] = [];
+  const points: number[] = [];
+  const accents: number[] = [];
 
-  void main() {
-    vec2 c = gl_PointCoord - vec2(0.5);
-    float alpha = 1.0 - smoothstep(0.18, 0.5, length(c));
-    vec3 cold = vec3(0.298, 0.788, 0.941);
-    vec3 warm = vec3(0.784, 0.663, 0.416);
-    vec3 color = mix(cold, warm, vDepth * 0.42);
-    gl_FragColor = vec4(color, alpha * 0.88);
+  for (let z = 0; z < layers; z += 1) {
+    for (let y = 0; y < rows; y += 1) {
+      for (let x = 0; x < columns; x += 1) {
+        const current = nodes[index(x, y, z)];
+
+        if (x < columns - 1 && random() > 0.16) {
+          lines.push(...current, ...nodes[index(x + 1, y, z)]);
+        }
+
+        if (y < rows - 1 && random() > 0.32) {
+          lines.push(...current, ...nodes[index(x, y + 1, z)]);
+        }
+
+        if (z < layers - 1 && random() > 0.8) {
+          lines.push(...current, ...nodes[index(x, y, z + 1)]);
+        }
+
+        if (random() < 0.035) {
+          accents.push(...current);
+        } else {
+          points.push(...current);
+        }
+      }
+    }
   }
-`;
+
+  return {
+    lines: new Float32Array(lines),
+    points: new Float32Array(points),
+    accents: new Float32Array(accents),
+  };
+};
+
+const supportsWebGL = () => {
+  try {
+    const canvas = document.createElement("canvas");
+    return Boolean(
+      window.WebGLRenderingContext &&
+        (canvas.getContext("webgl") || canvas.getContext("experimental-webgl")),
+    );
+  } catch {
+    return false;
+  }
+};
 
 export default function IntelligenceField() {
   const hostRef = useRef<HTMLDivElement | null>(null);
-  const mouseRef = useRef(new THREE.Vector2(0, 0));
+  const pointerRef = useRef(new THREE.Vector2(0, 0));
+  const activeRef = useRef(true);
+  const [canUseWebGL, setCanUseWebGL] = useState(true);
 
   useEffect(() => {
     const host = hostRef.current;
     if (!host) {
+      return;
+    }
+
+    if (!supportsWebGL()) {
+      setCanUseWebGL(false);
       return;
     }
 
@@ -49,99 +110,80 @@ export default function IntelligenceField() {
       alpha: true,
       powerPreference: "high-performance",
     });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1.5));
+    renderer.setClearAlpha(0);
     host.appendChild(renderer.domElement);
 
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 120);
-    camera.position.set(0, 0, 16);
+    const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 120);
+    camera.position.set(0, 0, 8.4);
 
+    const data = buildLattice();
     const group = new THREE.Group();
-    group.rotation.x = -0.54;
-    group.rotation.z = -0.22;
+    group.rotation.set(-0.16, 0.34, 0);
+    group.position.set(1.2, -0.05, 0);
     scene.add(group);
 
-    const count = window.innerWidth < 720 ? 840 : 1680;
-    const positions = new Float32Array(count * 3);
-    const sizes = new Float32Array(count);
-    const phases = new Float32Array(count);
-
-    for (let i = 0; i < count; i += 1) {
-      const ratio = i / count;
-      const angle = ratio * Math.PI * 28;
-      const band = (i % 34) / 34;
-      const radius = 1.8 + band * 6.2 + Math.sin(ratio * Math.PI * 8) * 0.36;
-      positions[i * 3] = Math.cos(angle) * radius;
-      positions[i * 3 + 1] = Math.sin(angle) * radius * 0.72;
-      positions[i * 3 + 2] = (band - 0.5) * 4.6 + Math.sin(angle * 0.6) * 0.72;
-      sizes[i] = 0.065 + (1 - band) * 0.048;
-      phases[i] = Math.random() * Math.PI * 2;
-    }
-
-    const geometry = new THREE.BufferGeometry();
-    geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
-    geometry.setAttribute("aSize", new THREE.BufferAttribute(sizes, 1));
-    geometry.setAttribute("aPhase", new THREE.BufferAttribute(phases, 1));
-
-    const material = new THREE.ShaderMaterial({
-      vertexShader,
-      fragmentShader,
+    const lineGeometry = new THREE.BufferGeometry();
+    lineGeometry.setAttribute("position", new THREE.BufferAttribute(data.lines, 3));
+    const lineMaterial = new THREE.LineBasicMaterial({
+      color: 0x3a5374,
       transparent: true,
-      depthWrite: false,
-      blending: THREE.AdditiveBlending,
-      uniforms: {
-        uTime: { value: 0 },
-        uMouse: { value: new THREE.Vector2(0, 0) },
-      },
+      opacity: 0.52,
     });
+    const lines = new THREE.LineSegments(lineGeometry, lineMaterial);
+    group.add(lines);
 
-    const points = new THREE.Points(geometry, material);
+    const pointGeometry = new THREE.BufferGeometry();
+    pointGeometry.setAttribute("position", new THREE.BufferAttribute(data.points, 3));
+    const pointMaterial = new THREE.PointsMaterial({
+      color: 0x9fb2c6,
+      size: 0.05,
+      sizeAttenuation: true,
+      transparent: true,
+      opacity: 0.88,
+    });
+    const points = new THREE.Points(pointGeometry, pointMaterial);
     group.add(points);
 
-    const ringMaterial = new THREE.LineBasicMaterial({
-      color: 0x4cc9f0,
+    const accentGeometry = new THREE.BufferGeometry();
+    accentGeometry.setAttribute("position", new THREE.BufferAttribute(data.accents, 3));
+    const accentMaterial = new THREE.PointsMaterial({
+      color: 0x32d69a,
+      size: 0.13,
+      sizeAttenuation: true,
       transparent: true,
-      opacity: 0.18,
+      opacity: 0.95,
     });
-
-    const rings: THREE.LineLoop[] = [];
-    for (let i = 0; i < 4; i += 1) {
-      const ringGeometry = new THREE.BufferGeometry();
-      const ringPositions: number[] = [];
-      const segments = 180;
-      const radius = 2.6 + i * 1.42;
-
-      for (let j = 0; j < segments; j += 1) {
-        const angle = (j / segments) * Math.PI * 2;
-        ringPositions.push(Math.cos(angle) * radius, Math.sin(angle) * radius * 0.72, i * 0.28);
-      }
-
-      ringGeometry.setAttribute(
-        "position",
-        new THREE.Float32BufferAttribute(ringPositions, 3),
-      );
-      const ring = new THREE.LineLoop(ringGeometry, ringMaterial.clone());
-      ring.rotation.z = i * 0.38;
-      group.add(ring);
-      rings.push(ring);
-    }
+    const accents = new THREE.Points(accentGeometry, accentMaterial);
+    group.add(accents);
 
     const resize = () => {
       const rect = host.getBoundingClientRect();
-      renderer.setSize(rect.width, rect.height, false);
-      camera.aspect = rect.width / rect.height;
+      const width = Math.max(1, rect.width);
+      const height = Math.max(1, rect.height);
+      renderer.setSize(width, height, false);
+      camera.aspect = width / height;
       camera.updateProjectionMatrix();
     };
 
     const onPointerMove = (event: PointerEvent) => {
       const rect = host.getBoundingClientRect();
-      const x = ((event.clientX - rect.left) / rect.width - 0.5) * 6;
-      const y = -((event.clientY - rect.top) / rect.height - 0.5) * 4;
-      mouseRef.current.set(x, y);
+      const x = ((event.clientX - rect.left) / rect.width - 0.5) * 2;
+      const y = -((event.clientY - rect.top) / rect.height - 0.5) * 2;
+      pointerRef.current.set(x, y);
     };
 
-    const observer = new ResizeObserver(resize);
-    observer.observe(host);
+    const visibilityObserver = new IntersectionObserver(
+      ([entry]) => {
+        activeRef.current = entry.isIntersecting;
+      },
+      { threshold: 0.05 },
+    );
+    visibilityObserver.observe(host);
+
+    const resizeObserver = new ResizeObserver(resize);
+    resizeObserver.observe(host);
     host.addEventListener("pointermove", onPointerMove);
     resize();
 
@@ -150,16 +192,15 @@ export default function IntelligenceField() {
 
     const render = () => {
       const elapsed = clock.getElapsedTime();
-      material.uniforms.uTime.value = elapsed * 0.56;
-      material.uniforms.uMouse.value.lerp(mouseRef.current, 0.04);
-      group.rotation.y = Math.sin(elapsed * 0.12) * 0.16;
-      group.rotation.z = -0.22 + Math.sin(elapsed * 0.1) * 0.04;
 
-      rings.forEach((ring, index) => {
-        ring.rotation.z += 0.0016 + index * 0.0006;
-        const lineMaterial = ring.material as THREE.LineBasicMaterial;
-        lineMaterial.opacity = 0.08 + Math.sin(elapsed * 0.7 + index) * 0.035;
-      });
+      if (activeRef.current) {
+        const targetY = 0.34 + Math.sin(elapsed * 0.12) * 0.1 + pointerRef.current.x * 0.12;
+        const targetX = -0.16 + Math.cos(elapsed * 0.1) * 0.05 - pointerRef.current.y * 0.08;
+        group.rotation.y += (targetY - group.rotation.y) * 0.035;
+        group.rotation.x += (targetX - group.rotation.x) * 0.035;
+        lineMaterial.opacity = 0.44 + Math.sin(elapsed * 0.8) * 0.08;
+        accentMaterial.size = 0.12 + Math.sin(elapsed * 1.2) * 0.018;
+      }
 
       renderer.render(scene, camera);
 
@@ -172,19 +213,41 @@ export default function IntelligenceField() {
 
     return () => {
       cancelAnimationFrame(frame);
-      observer.disconnect();
+      visibilityObserver.disconnect();
+      resizeObserver.disconnect();
       host.removeEventListener("pointermove", onPointerMove);
-      geometry.dispose();
-      material.dispose();
-      rings.forEach((ring) => {
-        ring.geometry.dispose();
-        (ring.material as THREE.Material).dispose();
-      });
-      ringMaterial.dispose();
+      lineGeometry.dispose();
+      pointGeometry.dispose();
+      accentGeometry.dispose();
+      lineMaterial.dispose();
+      pointMaterial.dispose();
+      accentMaterial.dispose();
       renderer.dispose();
       renderer.domElement.remove();
     };
   }, []);
 
-  return <div className="intelligence-field" ref={hostRef} aria-hidden="true" />;
+  return (
+    <div className="intelligence-field hero-lattice-field" ref={hostRef} aria-hidden="true">
+      {!canUseWebGL ? (
+        <svg viewBox="0 0 420 320" preserveAspectRatio="xMidYMid slice">
+          <g stroke="currentColor" strokeWidth="0.6" opacity="0.52">
+            {Array.from({ length: 11 }).map((_, index) => (
+              <line key={`v${index}`} x1={20 + index * 38} y1="24" x2={20 + index * 38} y2="296" />
+            ))}
+            {Array.from({ length: 8 }).map((_, index) => (
+              <line key={`h${index}`} x1="20" y1={24 + index * 39} x2="400" y2={24 + index * 39} />
+            ))}
+          </g>
+          <g fill="currentColor" opacity="0.76">
+            {Array.from({ length: 11 }).map((_, column) =>
+              Array.from({ length: 8 }).map((__, row) => (
+                <circle key={`n${column}-${row}`} cx={20 + column * 38} cy={24 + row * 39} r="1.5" />
+              )),
+            )}
+          </g>
+        </svg>
+      ) : null}
+    </div>
+  );
 }

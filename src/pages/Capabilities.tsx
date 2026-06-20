@@ -18,7 +18,7 @@ export default function Capabilities() {
           <SectionHeading
             eyebrow="Focus Areas"
             title="Each capability matters because it touches the hardware loop."
-            body="Sensing without control is observation. Control without perception is blind. Hardware without timing is only material. Esthien is organized around the loop."
+            body="Sensing without control is observation. Control without perception is blind. Hardware without timing is only material. Esthien Labs is organized around the loop."
           />
           <div className="capability-grid capability-grid--large">
             {capabilities.map((item) => {

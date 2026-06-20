@@ -8,7 +8,7 @@ export default function About() {
       <PageHero
         eyebrow="About"
         title="An institution for intelligence carried by hardware."
-        body="ESTHIEN TECHNOLOGIES is being built around FPGA-based chipsets, embodied intelligence, control systems, and the discipline required to make machines act with trust."
+        body="ESTHIEN LABS is being built around FPGA-based chipsets, embodied intelligence, control systems, and the discipline required to make machines act with trust."
       />
 
       <section className="section">
@@ -20,13 +20,13 @@ export default function About() {
           />
           <div className="copy-stack" data-reveal>
             <p>
-              ESTHIEN TECHNOLOGIES is focused on the systems layer where intelligence
+              ESTHIEN LABS is focused on the systems layer where intelligence
               becomes physical: FPGA logic, sensor pipelines, embedded computation,
               real-time decision loops, hardware architecture, and the control logic
               that moves machines precisely.
             </p>
             <p>
-              Esthien is a coined name shaped by the ideas of perception and
+              Esthien Labs is a coined institutional name shaped by the ideas of perception and
               intellect. It stays abstract on purpose, so the institution can
               grow across physical AI, embedded intelligence, medical systems,
               vehicle sensing, mobility, safety, and semiconductor work without being
@@ -47,7 +47,7 @@ export default function About() {
           <SectionHeading
             eyebrow="Company Detail"
             title="A staged path from FPGA concepts to deployed physical intelligence."
-            body="The archive frames Esthien as a company that can begin with reconfigurable hardware and grow toward specialized medical, mobility, embedded AI, and semiconductor programs."
+            body="The archive frames Esthien Labs as a company that can begin with reconfigurable hardware and grow toward specialized medical, mobility, embedded AI, and semiconductor programs."
           />
           <div className="detail-grid">
             {projectDetails.map((item) => {

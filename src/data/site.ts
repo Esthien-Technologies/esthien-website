@@ -62,14 +62,19 @@ export type UseCase = {
 };
 
 export const site = {
-  name: "ESTHIEN TECHNOLOGIES",
-  shortName: "ESTHIEN",
+  name: "ESTHIEN LABS",
+  shortName: "ESTHIEN LABS",
   domain: "esthien.com",
   email: "contact@esthien.com",
-  thesis: "FPGA-based intelligence chipsets for machines that move.",
+  thesis: "Engineering physical intelligence for machines that move.",
   supporting:
-    "Building reconfigurable edge-compute architectures for medical assistive systems and automotive sensing, where perception, deterministic control, and safety must happen on device.",
+    "Building deterministic embedded intelligence, FPGA compute, and control architectures for medical assistive systems and automotive sensing where perception, safety, and action must happen on device.",
   socialLinks: [
+    {
+      label: "LinkedIn",
+      href: "https://www.linkedin.com/company/132344254/",
+      icon: Network,
+    },
     {
       label: "Instagram",
       href: "https://www.instagram.com/esthien/",
@@ -84,6 +89,12 @@ export const navItems: NavItem[] = [
   { label: "Vision", href: "/vision" },
   { label: "Capabilities", href: "/capabilities" },
   { label: "Contact", href: "/contact" },
+];
+
+export const heroMetrics = [
+  { label: "Execution", value: "Deterministic", note: "Bounded, reproducible timing" },
+  { label: "Domain", value: "Physical", note: "Embedded, FPGA, sensing, control" },
+  { label: "Posture", value: "Engineering-first", note: "Stated assumptions and guarantees" },
 ];
 
 export const capabilities: Capability[] = [
@@ -138,7 +149,7 @@ export const principles = [
 export const identitySignals = [
   {
     title: "Perception and Intellect",
-    body: "The name Esthien is treated as a coined institutional name that points toward perception, thought, and action.",
+    body: "The name Esthien Labs is treated as a coined institutional identity that points toward perception, thought, and action.",
     icon: BrainCircuit,
   },
   {
@@ -234,7 +245,7 @@ export const contactRoutes = [
 export const projectDetails: DetailItem[] = [
   {
     title: "Institution First",
-    body: "Esthien is being built as a long-term deep-tech institution, broad enough for medical, mobility, embedded AI, and semiconductor work without being trapped by one early product.",
+    body: "Esthien Labs is being built as a long-term deep-tech institution, broad enough for medical, mobility, embedded AI, and semiconductor work without being trapped by one early product.",
     icon: Blocks,
   },
   {

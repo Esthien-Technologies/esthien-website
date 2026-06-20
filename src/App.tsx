@@ -15,7 +15,7 @@ export default function App() {
   useMotionSystem(location.pathname);
 
   useEffect(() => {
-    document.title = "Esthien";
+    document.title = "Esthien Labs";
   }, [location.pathname]);
 
   return (

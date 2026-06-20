@@ -1,19 +1,27 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
   <rect width="1200" height="630" fill="#050608"/>
-  <path d="M0 120H1200M0 240H1200M0 360H1200M0 480H1200M200 0V630M400 0V630M600 0V630M800 0V630M1000 0V630" stroke="#242B31" stroke-width="1"/>
-  <rect x="82" y="82" width="1036" height="466" stroke="#C8A96A" stroke-opacity=".36" stroke-width="2"/>
-  <path d="M120 123H1080V507H120V123Z" stroke="#4CC9F0" stroke-opacity=".2" stroke-width="1"/>
-  <g transform="translate(126 122)">
-    <rect width="104" height="104" fill="#080B0F" stroke="#C8A96A" stroke-opacity=".46" stroke-width="2"/>
-    <rect x="26" y="29" width="36" height="10" fill="#F4F1E8"/>
-    <rect x="26" y="48" width="48" height="10" fill="#F4F1E8"/>
-    <rect x="26" y="67" width="31" height="10" fill="#F4F1E8"/>
-    <path d="M60 35C72 35 76 46 88 46" stroke="#4CC9F0" stroke-width="6"/>
-    <path d="M60 73C72 73 76 62 88 62" stroke="#32D69A" stroke-width="6"/>
-    <path d="M58 54H90" stroke="#4CC9F0" stroke-opacity=".5" stroke-width="3"/>
+  <path d="M0 105H1200M0 210H1200M0 315H1200M0 420H1200M0 525H1200M150 0V630M300 0V630M450 0V630M600 0V630M750 0V630M900 0V630M1050 0V630" stroke="#252B31" stroke-width="1"/>
+  <g opacity=".58" stroke="#3A5374" stroke-width="1.2">
+    <path d="M650 155H1065M650 235H1065M650 315H1065M650 395H1065M650 475H1065"/>
+    <path d="M690 120V510M780 120V510M870 120V510M960 120V510M1050 120V510"/>
   </g>
-  <text x="260" y="188" fill="#F4F1E8" font-family="Arial, Helvetica, sans-serif" font-size="58" font-weight="700" letter-spacing="0">ESTHIEN TECHNOLOGIES</text>
-  <text x="126" y="332" fill="#4CC9F0" font-family="Arial, Helvetica, sans-serif" font-size="43" font-weight="600" letter-spacing="0">Bringing intelligence to motion.</text>
-  <text x="126" y="403" fill="#A6ADAD" font-family="Arial, Helvetica, sans-serif" font-size="26" font-weight="400" letter-spacing="0">Embodied intelligence systems for physical-world machines.</text>
-  <text x="126" y="452" fill="#32D69A" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="600" letter-spacing="0">PERCEPTION  /  CONTROL  /  HARDWARE  /  REAL-TIME COMPUTE</text>
+  <g fill="#9FB2C6" opacity=".86">
+    <circle cx="690" cy="155" r="4"/><circle cx="780" cy="235" r="4"/><circle cx="870" cy="315" r="4"/>
+    <circle cx="960" cy="395" r="4"/><circle cx="1050" cy="475" r="4"/><circle cx="780" cy="155" r="4"/>
+    <circle cx="960" cy="235" r="4"/><circle cx="690" cy="395" r="4"/><circle cx="870" cy="475" r="4"/>
+  </g>
+  <g fill="#32D69A">
+    <circle cx="870" cy="235" r="8"/><circle cx="1050" cy="315" r="8"/><circle cx="780" cy="475" r="8"/>
+  </g>
+  <rect x="82" y="82" width="1036" height="466" stroke="#C8A96A" stroke-opacity=".28" stroke-width="2"/>
+  <g transform="translate(126 122)">
+    <rect width="104" height="104" fill="#080B0F" stroke="#F4F1E8" stroke-opacity=".78" stroke-width="3"/>
+    <path d="M28 31H76M28 52H61M28 73H76" stroke="#F4F1E8" stroke-width="5"/>
+    <circle cx="76" cy="52" r="7" fill="#32D69A"/>
+    <path d="M76 52H92" stroke="#4CC9F0" stroke-opacity=".72" stroke-width="3"/>
+  </g>
+  <text x="260" y="188" fill="#F4F1E8" font-family="Aptos, Segoe UI, Arial, Helvetica, sans-serif" font-size="58" font-weight="700" letter-spacing="0">ESTHIEN LABS</text>
+  <text x="126" y="332" fill="#4CC9F0" font-family="Aptos, Segoe UI, Arial, Helvetica, sans-serif" font-size="43" font-weight="600" letter-spacing="0">Engineering physical intelligence.</text>
+  <text x="126" y="403" fill="#A6ADAD" font-family="Aptos, Segoe UI, Arial, Helvetica, sans-serif" font-size="26" font-weight="400" letter-spacing="0">Deterministic embedded systems, FPGA compute, and control.</text>
+  <text x="126" y="452" fill="#32D69A" font-family="Consolas, monospace" font-size="20" font-weight="600" letter-spacing="0">SENSE  /  RESOLVE  /  EXECUTE  /  VERIFY</text>
 </svg>

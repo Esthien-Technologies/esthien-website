@@ -10,6 +10,7 @@ import {
   chipsetReasons,
   doctrine,
   futureLanes,
+  heroMetrics,
   identitySignals,
   site,
   thesisChain,
@@ -24,7 +25,7 @@ export default function Home() {
         <div className="section-inner hero-inner">
           <div className="hero-copy">
             <span className="eyebrow" data-reveal>
-              FPGA chipset architecture
+              Esthien Labs / Physical Intelligence
             </span>
             <h1 data-reveal>{site.shortName}</h1>
             <p className="hero-thesis" data-reveal>
@@ -44,38 +45,23 @@ export default function Home() {
               </a>
             </div>
           </div>
-          <div className="hero-instrument" data-reveal data-parallax>
-            <div className="instrument-header">
-              <span>Signal to motion</span>
-              <span>Live</span>
-            </div>
-            <div className="instrument-readout">
-              <strong>Sense</strong>
-              <strong>Fabric</strong>
-              <strong>Act</strong>
-            </div>
-            <div className="instrument-wave" aria-hidden="true">
-              {Array.from({ length: 24 }, (_, index) => {
-                const height = 24 + ((index * 17) % 68);
-                return (
-                  <span
-                    key={index}
-                    style={
-                      {
-                        "--bar": index,
-                        "--height": `${height}%`,
-                      } as React.CSSProperties
-                    }
-                  />
-                );
-              })}
-            </div>
-            <div className="instrument-caption">
-              <span>Latency</span>
-              <span>Determinism</span>
-              <span>Safety</span>
-            </div>
+          <div className="hero-figure" data-reveal data-parallax>
+            <span className="figure-corner figure-corner--tl" />
+            <span className="figure-corner figure-corner--tr" />
+            <span className="figure-corner figure-corner--bl" />
+            <span className="figure-corner figure-corner--br" />
+            <span className="figure-label figure-label--top">Fig. 01 / Routing fabric</span>
+            <span className="figure-label figure-label--bottom">432 nodes / sense to act</span>
           </div>
+        </div>
+        <div className="hero-metrics" data-reveal>
+          {heroMetrics.map((metric) => (
+            <div className="hero-metric" key={metric.label}>
+              <span>{metric.label}</span>
+              <strong>{metric.value}</strong>
+              <small>{metric.note}</small>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -84,7 +70,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Company"
             title="Chipsets for intelligence that has to touch the world."
-            body="ESTHIEN TECHNOLOGIES is a deep-tech company focused on FPGA-based chipset architectures, deterministic control, and edge intelligence for medical and automotive physical systems."
+            body="ESTHIEN LABS is a deep-tech company focused on FPGA-based chipset architectures, deterministic control, and edge intelligence for medical and automotive physical systems."
           />
           <div className="statement-panel" data-reveal>
             <p>
@@ -242,7 +228,7 @@ export default function Home() {
             <span className="eyebrow">Future Room</span>
             <h2>Built to expand without changing the center.</h2>
             <p>
-              ESTHIEN can grow into specialized programs while the public brand
+              ESTHIEN LABS can grow into specialized programs while the public brand
               remains simple: intelligence for physical systems, measured by
               human capability and real-world reliability.
             </p>

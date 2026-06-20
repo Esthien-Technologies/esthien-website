@@ -19,7 +19,7 @@ export default function Navigation() {
         <BrandMark />
         <span>
           <strong>{site.shortName}</strong>
-          <small>TECHNOLOGIES</small>
+          <small>PHYSICAL INTELLIGENCE</small>
         </span>
       </Link>
 

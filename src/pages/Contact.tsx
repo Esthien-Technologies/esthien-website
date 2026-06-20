@@ -22,7 +22,7 @@ export default function Contact() {
       <PageHero
         eyebrow="Contact"
         title="Start with a direct company email."
-        body="For partnerships, collaborations, investors, customers, medical assistive systems, automotive sensing, and technical conversations, use the official ESTHIEN TECHNOLOGIES contact point."
+        body="For partnerships, collaborations, investors, customers, medical assistive systems, automotive sensing, and technical conversations, use the official ESTHIEN LABS contact point."
       />
 
       <section className="section">
@@ -37,7 +37,7 @@ export default function Contact() {
             <div className="contact-actions">
               <a className="primary-button" href={`mailto:${site.email}`}>
                 <Mail size={18} />
-                Email ESTHIEN
+                Email ESTHIEN LABS
               </a>
               <button className="secondary-button" type="button" onClick={copyEmail}>
                 <Copy size={17} />
@@ -67,8 +67,8 @@ export default function Contact() {
         <div className="section-inner">
           <SectionHeading
             eyebrow="Social Channels"
-            title="Official social profiles stay minimal."
-            body="Instagram is available for the public identity layer. Other channels can be activated later without changing the site structure."
+            title="Official social profiles stay focused."
+            body="LinkedIn is the primary company channel. Instagram remains available for the public identity layer."
           />
           <div className="social-reserve" data-reveal>
             {site.socialLinks.map((item) => {
