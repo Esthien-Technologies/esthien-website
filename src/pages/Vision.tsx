@@ -4,9 +4,9 @@ import { futureLanes, thesisChain } from "../data/site";
 
 const philosophy = [
   "The next class of intelligent systems will be judged by how reliably they operate in the physical world, not by how impressive they appear in isolation.",
-  "That requires more than models. It requires sensors, FPGA fabric, edge inference, timing, control, power, and failure behavior to move together.",
+  "That requires more than models. It requires sensors, FPGA fabric, edge inference, timing, control, power, and failure behavior to move together in hardware.",
   "A machine earns trust when it responds on time. In physical systems, a late decision can become indistinguishable from a wrong one.",
-  "Esthien Labs' first technical direction is chipset architecture for medical assistive systems and automotive sensing, where motion and safety depend on deterministic hardware.",
+  "Esthien Labs' first technical direction is chipset architecture for assistive medical devices and automotive sensing, where safety depends on deterministic hardware.",
 ];
 
 export default function Vision() {
@@ -14,15 +14,15 @@ export default function Vision() {
     <>
       <PageHero
         eyebrow="Vision"
-        title="Bringing intelligence into the hardware loop."
-        body="The company vision is broad enough to last and specific enough to guide work: build FPGA-based intelligence that improves human capability and safety in the physical world."
+        title="Building custom chipsets for physical AI."
+        body="The company vision is broad enough to last and specific enough to guide work: develop FPGA-based edge AI and fabricate custom chipsets that improve safety, capability, and reliability in medical and automotive systems."
       />
 
       <section className="section">
         <div className="section-inner vision-layout">
           <div className="vision-panel" data-reveal>
             <span>01</span>
-            <h2>Embodied intelligence is a chipset problem too.</h2>
+            <h2>Physical AI is a chipset problem too.</h2>
           </div>
           <div className="copy-stack">
             {philosophy.map((item) => (
@@ -92,8 +92,8 @@ export default function Vision() {
             <h2>Future work can specialize. The center stays constant.</h2>
             <p>
               The identity is built to support multiple directions without
-              losing the thesis: FPGA-based embodied intelligence that improves
-              capability, safety, and physical agency.
+              losing the thesis: FPGA-based edge intelligence that can mature
+              into custom silicon for safety, capability, and physical agency.
             </p>
           </div>
           <ul>

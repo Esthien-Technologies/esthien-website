@@ -9,15 +9,15 @@ export default function Capabilities() {
     <>
       <PageHero
         eyebrow="Capabilities"
-        title="A technical stack for FPGA-based intelligence in motion."
-        body="The company works across chipset architecture, embodied intelligence, control systems, embedded hardware, medical assistive systems, and automotive sensing without reducing the work to one narrow product label."
+        title="A technical stack for custom AI chipsets."
+        body="The company works across FPGA chipset architecture, edge AI, control systems, embedded hardware, assistive medical devices, and automotive sensing without reducing the work to one narrow product label."
       />
 
       <section className="section">
         <div className="section-inner">
           <SectionHeading
             eyebrow="Focus Areas"
-            title="Each capability matters because it touches the hardware loop."
+            title="Each capability matters because it touches the hardware path."
             body="Sensing without control is observation. Control without perception is blind. Hardware without timing is only material. Esthien Labs is organized around the loop."
           />
           <div className="capability-grid capability-grid--large">
@@ -43,7 +43,7 @@ export default function Capabilities() {
           <SectionHeading
             eyebrow="Use Cases"
             title="Medical and automotive are different markets with the same timing problem."
-            body="Bionic arms, prosthetic support, radar, and ADAS all need fast local interpretation of real-world signals. FPGA concepts are the bridge between flexible research hardware and future specialized chipsets."
+            body="Bionic arms, prosthetic support, radar, and ADAS all need fast local interpretation of real-world signals. FPGA concepts are the bridge between flexible research hardware and fabricated specialized chipsets."
           />
           <ProjectFocus />
         </div>
@@ -90,7 +90,7 @@ export default function Capabilities() {
           <SectionHeading
             eyebrow="Chipset Requirement"
             title="Why this work belongs close to the sensors."
-            body="The project uses FPGA concepts because the hardest physical systems are constrained by time, privacy, fault behavior, and parallel I/O."
+            body="The project uses FPGA concepts because the hardest medical and automotive systems are constrained by time, privacy, fault behavior, and parallel I/O."
           />
           <div className="reason-grid">
             {chipsetReasons.map((item) => {

@@ -7,7 +7,9 @@ import { useMotionSystem } from "./hooks/useMotionSystem";
 import About from "./pages/About";
 import Capabilities from "./pages/Capabilities";
 import Contact from "./pages/Contact";
+import ErrorPage from "./pages/ErrorPage";
 import Home from "./pages/Home";
+import SecurityAlert from "./pages/SecurityAlert";
 import Vision from "./pages/Vision";
 
 export default function App() {
@@ -29,6 +31,10 @@ export default function App() {
           <Route path="/vision" element={<Vision />} />
           <Route path="/capabilities" element={<Capabilities />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/error" element={<ErrorPage code="500" title="Something slipped out of phase." body="The site reached a safe fallback state. Try the previous page or return home." />} />
+          <Route path="/security-alert" element={<SecurityAlert />} />
+          <Route path="/system-lockdown" element={<SecurityAlert />} />
+          <Route path="*" element={<ErrorPage />} />
         </Routes>
       </main>
       <Footer />

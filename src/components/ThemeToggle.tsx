@@ -38,7 +38,7 @@ export default function ThemeToggle() {
     }
 
     const themeColor = document.querySelector<HTMLMetaElement>('meta[name="theme-color"]');
-    themeColor?.setAttribute("content", theme === "dark" ? "#050608" : "#f7f4ec");
+    themeColor?.setAttribute("content", theme === "dark" ? "#050608" : "#f8faf9");
   }, [theme]);
 
   return (

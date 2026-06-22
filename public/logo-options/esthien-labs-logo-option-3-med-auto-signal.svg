@@ -1,0 +1,20 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="360" rx="28" fill="#06090B"/>
+  <g opacity=".48" stroke="#1D3038" stroke-width="2">
+    <path d="M0 90H1200M0 180H1200M0 270H1200"/>
+    <path d="M160 0V360M340 0V360M520 0V360M700 0V360M880 0V360M1060 0V360"/>
+  </g>
+  <g transform="translate(92 63)">
+    <path d="M18 122C62 54 126 20 208 20C250 20 288 30 322 51C286 111 232 192 126 224C83 209 47 174 18 122Z" fill="#0E1719" stroke="#DFF5EF" stroke-width="7" stroke-linejoin="round"/>
+    <path d="M74 86H171M74 122H152M74 158H171" stroke="#DFF5EF" stroke-width="13" stroke-linecap="square"/>
+    <path d="M152 122H251" stroke="#4CC9F0" stroke-width="10" stroke-linecap="round"/>
+    <path d="M220 74C244 91 260 108 270 126" stroke="#32D69A" stroke-width="8" stroke-linecap="round"/>
+    <path d="M220 170C244 153 260 136 270 118" stroke="#32D69A" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="152" cy="122" r="19" fill="#32D69A"/>
+    <circle cx="152" cy="122" r="39" stroke="#32D69A" stroke-opacity=".42" stroke-width="6"/>
+  </g>
+  <text x="474" y="129" fill="#F8FAF9" font-family="Verdana, Arial, Helvetica, sans-serif" font-size="60" font-weight="800" letter-spacing="2">ESTHIEN LABS</text>
+  <text x="477" y="188" fill="#DFF5EF" font-family="Georgia, Times New Roman, serif" font-size="32" font-weight="700" letter-spacing=".2">Engineering Custom FPGA Chipsets</text>
+  <text x="477" y="232" fill="#32D69A" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="800" letter-spacing="3.2">FOR PHYSICAL INTELLIGENCE</text>
+  <path d="M477 263H1002" stroke="#1D3038" stroke-width="2"/>
+</svg>

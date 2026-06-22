@@ -127,9 +127,9 @@ export default function IntelligenceField() {
     const lineGeometry = new THREE.BufferGeometry();
     lineGeometry.setAttribute("position", new THREE.BufferAttribute(data.lines, 3));
     const lineMaterial = new THREE.LineBasicMaterial({
-      color: 0x3a5374,
+      color: 0x55769c,
       transparent: true,
-      opacity: 0.52,
+      opacity: 0.78,
     });
     const lines = new THREE.LineSegments(lineGeometry, lineMaterial);
     group.add(lines);
@@ -137,11 +137,11 @@ export default function IntelligenceField() {
     const pointGeometry = new THREE.BufferGeometry();
     pointGeometry.setAttribute("position", new THREE.BufferAttribute(data.points, 3));
     const pointMaterial = new THREE.PointsMaterial({
-      color: 0x9fb2c6,
-      size: 0.05,
+      color: 0xc4d3e2,
+      size: 0.064,
       sizeAttenuation: true,
       transparent: true,
-      opacity: 0.88,
+      opacity: 1,
     });
     const points = new THREE.Points(pointGeometry, pointMaterial);
     group.add(points);
@@ -198,7 +198,7 @@ export default function IntelligenceField() {
         const targetX = -0.16 + Math.cos(elapsed * 0.1) * 0.05 - pointerRef.current.y * 0.08;
         group.rotation.y += (targetY - group.rotation.y) * 0.035;
         group.rotation.x += (targetX - group.rotation.x) * 0.035;
-        lineMaterial.opacity = 0.44 + Math.sin(elapsed * 0.8) * 0.08;
+        lineMaterial.opacity = 0.7 + Math.sin(elapsed * 0.8) * 0.08;
         accentMaterial.size = 0.12 + Math.sin(elapsed * 1.2) * 0.018;
       }
 

@@ -66,9 +66,9 @@ export const site = {
   shortName: "ESTHIEN LABS",
   domain: "esthien.com",
   email: "contact@esthien.com",
-  thesis: "Engineering physical intelligence for machines that move.",
+  thesis: "Engineering Custom FPGA Chipsets for PHYSICAL INTELLIGENCE",
   supporting:
-    "Building deterministic embedded intelligence, FPGA compute, and control architectures for medical assistive systems and automotive sensing where perception, safety, and action must happen on device.",
+    "Esthien Labs develops deterministic FPGA-based edge AI, sensor-fusion, and control architectures on the path to fabricated custom chipsets for assistive medical technology, prosthetics, automotive radar, and safety-critical embedded systems.",
   socialLinks: [
     {
       label: "LinkedIn",
@@ -92,37 +92,37 @@ export const navItems: NavItem[] = [
 ];
 
 export const heroMetrics = [
-  { label: "Execution", value: "Deterministic", note: "Bounded, reproducible timing" },
-  { label: "Domain", value: "Physical", note: "Embedded, FPGA, sensing, control" },
-  { label: "Posture", value: "Engineering-first", note: "Stated assumptions and guarantees" },
+  { label: "Platform", value: "Custom Chipsets", note: "FPGA to specialized silicon" },
+  { label: "Markets", value: "Medical + Automotive", note: "Assistive devices, radar, safety systems" },
+  { label: "Execution", value: "Deterministic Edge AI", note: "Bounded timing on local hardware" },
 ];
 
 export const capabilities: Capability[] = [
   {
     title: "FPGA Chipset Architecture",
     description:
-      "Reconfigurable logic fabrics, SoC pathways, and edge accelerators shaped for low-latency sensor fusion and control.",
+      "Reconfigurable logic fabrics, SoC pathways, and edge accelerators built as a stepping stone toward fabricated custom silicon.",
     icon: CircuitBoard,
     signal: "Fabric",
   },
   {
     title: "Medical Assistive Systems",
     description:
-      "Hardware and control blocks for bionic arms, prosthetic control, joint support, and mobility systems that help people move.",
+      "Custom control and compute blocks for bionic arms, prosthetic control, joint support, and mobility-assist medical devices.",
     icon: HeartPulse,
     signal: "Human",
   },
   {
     title: "Automotive Sensing and Radar",
     description:
-      "On-device perception pipelines for radar, ADAS, and mobile platforms where signals must become safe response quickly.",
+      "On-device perception pipelines for automotive radar, ADAS, and vehicle safety systems where signals must become response quickly.",
     icon: Radar,
     signal: "Vehicle",
   },
   {
     title: "Deterministic Control",
     description:
-      "Real-time loops, safe fallback behavior, and hardware isolation for physical systems where a late answer can be wrong.",
+      "Real-time loops, safe fallback behavior, and hardware isolation for systems where a late answer can become unsafe.",
     icon: Timer,
     signal: "Resolve",
   },
@@ -141,7 +141,7 @@ export const principles = [
   },
   {
     title: "Long Horizon",
-    body: "The company is positioned as a durable technical institution, not a campaign around a single product wedge.",
+    body: "The company is positioned for the long path from FPGA prototypes to fabricated custom chipsets.",
     icon: Route,
   },
 ];
@@ -209,11 +209,11 @@ export const doctrine = [
 ];
 
 export const futureLanes = [
-  "FPGA-based chipset and reference hardware programs",
-  "Bionic arms, prosthetic control, and mobility-assist systems",
-  "Radar, ADAS, and vehicle edge-intelligence modules",
+  "FPGA-based chipset prototypes and reference hardware",
+  "Fabricated custom silicon for validated medical and automotive workloads",
+  "Bionic arms, prosthetic control, and mobility-assist medical systems",
+  "Automotive radar, ADAS, and vehicle edge-intelligence modules",
   "Safety-critical embedded control and sensor fusion",
-  "Future custom silicon when scale justifies it",
 ];
 
 export const systemLayers = [
@@ -245,12 +245,12 @@ export const contactRoutes = [
 export const projectDetails: DetailItem[] = [
   {
     title: "Institution First",
-    body: "Esthien Labs is being built as a long-term deep-tech institution, broad enough for medical, mobility, embedded AI, and semiconductor work without being trapped by one early product.",
+    body: "Esthien Labs is being built as a long-term deep-tech institution, broad enough for medical devices, automotive sensing, embedded AI, and semiconductor work without being trapped by one early product.",
     icon: Blocks,
   },
   {
     title: "Chipset Center",
-    body: "The technical center is FPGA-based edge intelligence: hardware close to sensors and actuators, built for deterministic timing rather than cloud-dependent response.",
+    body: "The technical center is FPGA-based edge intelligence today and custom chipset fabrication over time: hardware close to sensors and actuators, built for deterministic timing rather than cloud-dependent response.",
     icon: Microchip,
   },
   {
@@ -263,7 +263,7 @@ export const projectDetails: DetailItem[] = [
 export const chipsetReasons: DetailItem[] = [
   {
     title: "Timing Cannot Wait",
-    body: "A bionic arm, radar stack, or safety controller cannot depend on a distant server before acting. On-device chipsets reduce the distance between signal and response.",
+    body: "A bionic arm, radar stack, or safety controller cannot depend on a distant server before acting. Custom edge chipsets reduce the distance between signal and response.",
     icon: Zap,
   },
   {
@@ -287,8 +287,8 @@ export const useCases: UseCase[] = [
   {
     key: "medical",
     label: "Medical",
-    title: "Assistive hardware for human motion.",
-    body: "The medical lane focuses on the electronics and control intelligence behind bionic arms, prosthetic systems, joint assistance, and mobility support.",
+    title: "Assistive medical hardware with local intelligence.",
+    body: "The medical lane focuses on custom electronics and control intelligence behind bionic arms, prosthetic systems, joint assistance, and mobility support.",
     points: [
       "Low-latency intent detection for responsive movement",
       "Deterministic motor control for steadier assistive motion",
@@ -299,8 +299,8 @@ export const useCases: UseCase[] = [
   {
     key: "automotive",
     label: "Automotive",
-    title: "Radar and safety modules for moving platforms.",
-    body: "The automotive lane treats radar, ADAS, and vehicle perception as timing-critical systems where sensor data must become bounded, safe action.",
+    title: "Automotive radar and safety modules.",
+    body: "The automotive lane treats radar, ADAS, and vehicle perception as timing-critical systems where sensor data must become bounded, safe response.",
     points: [
       "Radar preprocessing and sensor-fusion acceleration",
       "Edge decisions that reduce network and CPU bottlenecks",
@@ -311,8 +311,8 @@ export const useCases: UseCase[] = [
   {
     key: "fpga",
     label: "FPGA Fabric",
-    title: "Reconfigurable chipsets before fixed silicon.",
-    body: "The architecture begins with FPGA concepts because reconfigurable logic allows rapid iteration, parallel pipelines, and deterministic timing before any future custom silicon path.",
+    title: "Reconfigurable chipsets before fabricated silicon.",
+    body: "The architecture begins with FPGA concepts because reconfigurable logic allows rapid iteration, parallel pipelines, and deterministic timing before a future custom silicon path.",
     points: [
       "Parallel sensor, inference, and control lanes",
       "Hardware isolation for safety-critical functions",

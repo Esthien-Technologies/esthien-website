@@ -11,7 +11,7 @@ export default function Footer() {
           <BrandMark />
           <div>
             <strong>{site.name}</strong>
-            <p>FPGA-based intelligence chipsets for medical and automotive systems.</p>
+            <p>Custom AI chipset architecture for medical devices and automotive systems.</p>
           </div>
         </div>
 

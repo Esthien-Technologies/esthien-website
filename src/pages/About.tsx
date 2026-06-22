@@ -7,23 +7,23 @@ export default function About() {
     <>
       <PageHero
         eyebrow="About"
-        title="An institution for intelligence carried by hardware."
-        body="ESTHIEN LABS is being built around FPGA-based chipsets, embodied intelligence, control systems, and the discipline required to make machines act with trust."
+        title="An institution for custom intelligence hardware."
+        body="ESTHIEN LABS is being built around FPGA-based chipsets, custom silicon paths, edge AI, control systems, and the discipline required to make medical and automotive systems act with trust."
       />
 
       <section className="section">
         <div className="section-inner split-layout">
           <SectionHeading
             eyebrow="Position"
-            title="The company is broader than its first chipset."
-            body="The name was chosen to hold a broader idea: perception, intellect, and motion brought into one durable institutional identity."
+            title="The company is broader than its first chipset program."
+            body="The name was chosen to hold a broader idea: perception, intellect, and physical response brought into one durable semiconductor identity."
           />
           <div className="copy-stack" data-reveal>
             <p>
               ESTHIEN LABS is focused on the systems layer where intelligence
               becomes physical: FPGA logic, sensor pipelines, embedded computation,
               real-time decision loops, hardware architecture, and the control logic
-              that moves machines precisely.
+              that makes medical and automotive systems respond precisely.
             </p>
             <p>
               Esthien Labs is a coined institutional name shaped by the ideas of perception and
@@ -46,8 +46,8 @@ export default function About() {
         <div className="section-inner">
           <SectionHeading
             eyebrow="Company Detail"
-            title="A staged path from FPGA concepts to deployed physical intelligence."
-            body="The archive frames Esthien Labs as a company that can begin with reconfigurable hardware and grow toward specialized medical, mobility, embedded AI, and semiconductor programs."
+            title="A staged path from FPGA concepts to fabricated chipsets."
+            body="The archive frames Esthien Labs as a company that can begin with reconfigurable hardware and grow toward specialized medical, automotive, embedded AI, and semiconductor programs."
           />
           <div className="detail-grid">
             {projectDetails.map((item) => {

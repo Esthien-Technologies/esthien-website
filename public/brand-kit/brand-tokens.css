@@ -1,0 +1,11 @@
+:root {
+  --esthien-core-black: #0a0d10;
+  --esthien-panel-black: #11181c;
+  --esthien-lab-white: #f8faf9;
+  --esthien-logic-green: #32d69a;
+  --esthien-signal-cyan: #4cc9f0;
+  --esthien-graphite-line: #2b373d;
+  --esthien-display-font: "Arial Black", Arial, Helvetica, sans-serif;
+  --esthien-body-font: Arial, Helvetica, sans-serif;
+  --esthien-mono-font: Consolas, "Courier New", monospace;
+}

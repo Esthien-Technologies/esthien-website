@@ -69,8 +69,8 @@ export default function Home() {
         <div className="section-inner split-layout">
           <SectionHeading
             eyebrow="Company"
-            title="Chipsets for intelligence that has to touch the world."
-            body="ESTHIEN LABS is a deep-tech company focused on FPGA-based chipset architectures, deterministic control, and edge intelligence for medical and automotive physical systems."
+            title="Custom chipsets for intelligence that has to run on device."
+            body="ESTHIEN LABS is a deep-tech company focused on FPGA-based chipset architectures, deterministic control, and edge AI for assistive medical devices, prosthetics, automotive radar, and vehicle safety systems."
           />
           <div className="statement-panel" data-reveal>
             <p>
@@ -87,8 +87,8 @@ export default function Home() {
         <div className="section-inner split-layout split-layout--wide">
           <SectionHeading
             eyebrow="Project"
-            title="A focused chipset company with two physical-world lanes."
-            body="The archive points to a clear technical center: start with FPGA concepts, build the nervous system of machines, and apply it first where timing, safety, and human capability matter."
+            title="A focused chipset company for medical and automotive systems."
+            body="The technical center is clear: begin with FPGA concepts, prove deterministic edge intelligence close to sensors, then move toward custom silicon where timing, safety, and reliability justify fabrication."
           />
           <ProjectFocus />
         </div>
@@ -122,8 +122,8 @@ export default function Home() {
         <div className="section-inner">
           <SectionHeading
             eyebrow="Core Areas"
-            title="The stack is the product."
-            body="The technical center is specific: FPGA fabric, edge inference, sensor fusion, safety control, and hardware architecture that can live inside medical and vehicle systems."
+            title="The hardware stack is the product."
+            body="The technical center is specific: FPGA fabric, edge inference, sensor fusion, safety control, and chipset architecture that can live inside medical and vehicle systems."
           />
           <div className="capability-grid">
             {capabilities.map((item) => {
@@ -148,7 +148,7 @@ export default function Home() {
           <SectionHeading
             eyebrow="Why Chipsets"
             title="Physical intelligence needs hardware close to the signal."
-            body="Cloud AI can be powerful, but bionic arms, radar stacks, and safety controllers need bounded response on the device itself."
+            body="Cloud AI can be powerful, but bionic arms, radar stacks, and safety controllers need bounded response on the device itself, from FPGA prototypes to future custom silicon."
           />
           <div className="reason-grid">
             {chipsetReasons.map((item) => {
@@ -165,7 +165,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section-muted">
+      <section className="section section-muted mobile-secondary-section">
         <div className="section-inner doctrine-layout">
           <SectionHeading
             eyebrow="Doctrine"
@@ -189,7 +189,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section mobile-secondary-section">
         <div className="section-inner split-layout split-layout--wide">
           <SectionHeading
             eyebrow="Architecture"
@@ -200,7 +200,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section section-muted">
+      <section className="section section-muted mobile-secondary-section">
         <div className="section-inner">
           <SectionHeading
             eyebrow="Identity"
@@ -222,7 +222,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section mobile-secondary-section">
         <div className="section-inner future-band" data-reveal>
           <div>
             <span className="eyebrow">Future Room</span>

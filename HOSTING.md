@@ -1,4 +1,4 @@
-# Hosting ESTHIEN TECHNOLOGIES on Cloudflare
+# Hosting ESTHIEN LABS on Cloudflare
 
 This project is a static Vite website. The production build is generated into `dist/`, so it is a good fit for Cloudflare Pages.
 
@@ -50,8 +50,10 @@ Because `esthien.com` was bought through Cloudflare, DNS is already in the right
 
 - Configure `contact@esthien.com` before launch with Google Workspace, Cloudflare Email Routing, or another provider.
 - If using Google Workspace, add the MX, SPF, DKIM, and DMARC records Cloudflare asks for.
+- Security alert emails go to `founder@esthien.com` through the Cloudflare Worker endpoint at `/api/security-breach`.
+- For automatic security emails, configure either `SECURITY_WEBHOOK_URL` or `RESEND_API_KEY` in Cloudflare Worker secrets. If using Resend, also set `SECURITY_FROM_EMAIL` to a verified sender such as `Esthien Security <security@esthien.com>`.
 - Add official social links in `src/data/site.ts` under `site.socialLinks` when handles are created.
-- The current website already reserves room for LinkedIn, X, GitHub, and YouTube without exposing fake links.
+- The current website links the official LinkedIn and Instagram profiles and reserves room for X and YouTube without exposing fake links.
 
 ## Recommended Launch Checks
 
@@ -70,4 +72,4 @@ The site is already split into routes and reusable sections:
 - Add social links in `src/data/site.ts`.
 - Add new navigation pages in `src/data/site.ts` and `src/App.tsx`.
 - Add deeper capability pages when there are verified details to publish.
-- Replace `/public/esthien-og.svg` when you create a final brand system.
+- Keep `/public/esthien-og.svg` as the editable source and regenerate `/public/esthien-og.png` whenever the social artwork changes.

@@ -1,0 +1,16 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="360" rx="28" fill="#F8FAF9"/>
+  <rect x="64" y="64" width="1072" height="232" rx="14" fill="#FFFFFF" stroke="#CBD5D8" stroke-width="2"/>
+  <g transform="translate(104 94)">
+    <path d="M0 0H186V39H52V67H159V105H52V134H186V173H0V0Z" fill="#0A0D10"/>
+    <path d="M204 0H239V173H204V0Z" fill="#14956B"/>
+    <path d="M256 0H291V173H256V0Z" fill="#087CA6"/>
+    <path d="M204 34H291M204 139H291" stroke="#CBD5D8" stroke-width="8"/>
+    <circle cx="221.5" cy="86.5" r="10.5" fill="#FFFFFF"/>
+    <circle cx="273.5" cy="86.5" r="10.5" fill="#FFFFFF"/>
+  </g>
+  <text x="454" y="139" fill="#0A0D10" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="60" font-weight="900">ESTHIEN LABS</text>
+  <text x="457" y="195" fill="#087CA6" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="800" letter-spacing="3.2">ENGINEERING CUSTOM FPGA CHIPSETS</text>
+  <text x="457" y="237" fill="#253238" font-family="Arial, Helvetica, sans-serif" font-size="23" font-weight="800" letter-spacing="3.2">FOR PHYSICAL INTELLIGENCE</text>
+  <path d="M457 263H1010" stroke="#CBD5D8" stroke-width="2"/>
+</svg>

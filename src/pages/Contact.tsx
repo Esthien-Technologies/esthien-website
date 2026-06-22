@@ -83,7 +83,7 @@ export default function Contact() {
                 </a>
               );
             })}
-            {["LinkedIn", "X", "YouTube"].map((label) => (
+            {["X", "YouTube"].map((label) => (
               <div key={label}>
                 <span>{label}</span>
                 <ArrowUpRight size={15} />
