@@ -1,6 +1,6 @@
 # Esthien Labs Brand Kit
 
-Selected direction: Silicon Strata.
+Selected direction: Silicon Strata, refreshed with a more linear E mark.
 
 ## Files
 
@@ -16,7 +16,9 @@ Selected direction: Silicon Strata.
 
 ## Tagline
 
-Engineering Custom FPGA Chipsets for PHYSICAL INTELLIGENCE
+Custom FPGA chipsets for physical intelligence.
+
+Use the tagline in title case in prose and as `CUSTOM FPGA CHIPSETS FOR PHYSICAL INTELLIGENCE` in logo lockups or compact identity applications.
 
 ## Color Tokens
 
@@ -32,6 +34,7 @@ Engineering Custom FPGA Chipsets for PHYSICAL INTELLIGENCE
 - Wordmark: heavy geometric sans, high confidence, wide technical presence.
 - Supporting text: clean sans with tracked uppercase for semiconductor/instrument feel.
 - Editorial accent: restrained serif only for larger brand statements.
+- Monogram: the E is built from one vertical stem and three aligned horizontal strokes. Keep this geometry consistent across SVG, PNG, social, and website UI formats.
 
 ## Usage Notes
 
@@ -41,6 +44,7 @@ Engineering Custom FPGA Chipsets for PHYSICAL INTELLIGENCE
 - Use the standalone mark only when the full `ESTHIEN LABS` wordmark would be too small.
 - Keep the company name written as `Esthien Labs` in prose and `ESTHIEN LABS` inside the identity system.
 - Do not recreate the wordmark with a substitute font; use the supplied SVG artwork.
+- Use the source SVGs when exporting new PNGs so the linear E, signal bars, and tagline remain consistent.
 
 ## Minimum Size
 

@@ -37,6 +37,7 @@
   --logo-line: rgba(244, 241, 232, 0.34);
   --ghost-text: rgba(244, 241, 232, 0.13);
   --brand-fade: rgba(244, 241, 232, 0.3);
+  --selection-bg: rgba(76, 201, 240, 0.34);
   --hero-overlay:
     linear-gradient(90deg, rgba(5, 6, 8, 0.94) 0%, rgba(5, 6, 8, 0.58) 46%, rgba(5, 6, 8, 0.08) 100%),
     linear-gradient(180deg, rgba(5, 6, 8, 0.5), rgba(5, 6, 8, 0.18) 44%, rgba(5, 6, 8, 0.9) 100%);
@@ -99,6 +100,7 @@
   --logo-line: rgba(16, 27, 31, 0.2);
   --ghost-text: rgba(21, 33, 37, 0.12);
   --brand-fade: rgba(21, 33, 37, 0.34);
+  --selection-bg: rgba(0, 111, 142, 0.22);
   --hero-overlay:
     linear-gradient(90deg, rgba(248, 250, 249, 0.95) 0%, rgba(248, 250, 249, 0.72) 48%, rgba(248, 250, 249, 0.3) 100%),
     linear-gradient(180deg, rgba(248, 250, 249, 0.68), rgba(248, 250, 249, 0.38) 44%, rgba(248, 250, 249, 0.94) 100%);
@@ -175,8 +177,8 @@ strong {
 }
 
 ::selection {
-  color: var(--bg);
-  background: var(--accent);
+  color: var(--text);
+  background: var(--selection-bg);
 }
 
 .site-main {
@@ -444,6 +446,37 @@ strong {
   display: block;
   width: 100%;
   height: 100%;
+}
+
+.intelligence-field svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.reveal-pending {
+  opacity: 0;
+  transform: translateY(24px);
+  transition:
+    opacity 560ms ease,
+    transform 560ms ease;
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal-pending.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.rail-pending {
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 640ms ease;
+}
+
+.rail-pending.is-extended {
+  transform: scaleX(1);
 }
 
 .hero-lattice-field {

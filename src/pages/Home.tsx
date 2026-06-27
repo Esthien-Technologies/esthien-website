@@ -8,6 +8,7 @@ import SignalDiagram from "../components/SignalDiagram";
 import {
   capabilities,
   chipsetReasons,
+  discoverySignals,
   doctrine,
   futureLanes,
   heroMetrics,
@@ -91,6 +92,28 @@ export default function Home() {
             body="The technical center is clear: begin with FPGA concepts, prove deterministic edge intelligence close to sensors, then move toward custom silicon where timing, safety, and reliability justify fabrication."
           />
           <ProjectFocus />
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="section-inner">
+          <SectionHeading
+            eyebrow="Company Profile"
+            title="A searchable identity for chipsets, bionic arms, and edge AI hardware."
+            body="The public profile uses plain, crawlable language around Esthien Labs, FPGA chipsets, assistive medical systems, automotive radar, and the path from reconfigurable hardware to custom silicon."
+          />
+          <div className="detail-grid">
+            {discoverySignals.map((item) => {
+              const Icon = item.icon;
+              return (
+                <article className="detail-card" key={item.title} data-reveal>
+                  <Icon size={22} />
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                </article>
+              );
+            })}
+          </div>
         </div>
       </section>
 

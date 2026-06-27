@@ -11,7 +11,7 @@ export default function Footer() {
           <BrandMark />
           <div>
             <strong>{site.name}</strong>
-            <p>Custom AI chipset architecture for medical devices and automotive systems.</p>
+            <p>{site.tagline} Medical devices, bionic arms, prosthetics, automotive radar, and edge AI hardware.</p>
           </div>
         </div>
 

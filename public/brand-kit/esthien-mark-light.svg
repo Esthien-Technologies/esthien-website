@@ -1,16 +1,13 @@
-<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_2011_46)">
-<path d="M78 0H18C8.05887 0 0 8.05887 0 18V78C0 87.9411 8.05887 96 18 96H78C87.9411 96 96 87.9411 96 78V18C96 8.05887 87.9411 0 78 0Z" fill="#F8FAF9"/>
-<path d="M13 18H52V31H26V39H47V51H26V65H52V78H13V18Z" fill="#0A0D10"/>
-<path d="M59 18H69V78H59V18Z" fill="#14956B"/>
-<path d="M74 18H84V78H74V18Z" fill="#087CA6"/>
-<path d="M59 31H84M59 65H84" stroke="#CBD5D8" stroke-width="4"/>
-<path d="M63.9969 52.1998C66.3165 52.1998 68.1969 50.3194 68.1969 47.9998C68.1969 45.6802 66.3165 43.7998 63.9969 43.7998C61.6773 43.7998 59.7969 45.6802 59.7969 47.9998C59.7969 50.3194 61.6773 52.1998 63.9969 52.1998Z" fill="#F8FAF9"/>
-<path d="M78.9969 52.1998C81.3165 52.1998 83.1969 50.3194 83.1969 47.9998C83.1969 45.6802 81.3165 43.7998 78.9969 43.7998C76.6773 43.7998 74.7969 45.6802 74.7969 47.9998C74.7969 50.3194 76.6773 52.1998 78.9969 52.1998Z" fill="#F8FAF9"/>
-</g>
-<defs>
-<clipPath id="clip0_2011_46">
-<rect width="96" height="96" fill="white"/>
-</clipPath>
-</defs>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Esthien Labs mark">
+  <title>Esthien Labs mark</title>
+  <desc>Linear E monogram with two routed signal bars for Esthien Labs.</desc>
+  <rect width="96" height="96" rx="18" fill="#F8FAF9" stroke="#2B373D" stroke-width="1.5"/>
+  
+  <path d="M13 18H26V78H13V18Z M26 18H52V31H26V18Z M26 41.5H48V54.5H26V41.5Z M26 65H52V78H26V65Z" fill="#0A0D10"/>
+  <path d="M59 18H69V78H59V18Z" fill="#32D69A"/>
+  <path d="M74 18H84V78H74V18Z" fill="#4CC9F0"/>
+  <path d="M59 31H84M59 65H84" stroke="#CBD5D8" stroke-width="4"/>
+  <circle cx="64" cy="48" r="4.2" fill="#FFFFFF"/>
+  <circle cx="79" cy="48" r="4.2" fill="#FFFFFF"/>
 </svg>

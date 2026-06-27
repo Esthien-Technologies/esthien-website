@@ -20,6 +20,7 @@ import {
   Radar,
   Route,
   ScanLine,
+  Search,
   ShieldAlert,
   ShieldCheck,
   Stethoscope,
@@ -64,11 +65,41 @@ export type UseCase = {
 export const site = {
   name: "ESTHIEN LABS",
   shortName: "ESTHIEN LABS",
-  domain: "esthien.com",
+  legalName: "Esthien Labs Private Limited",
+  domain: "www.esthien.com",
   email: "contact@esthien.com",
-  thesis: "Engineering Custom FPGA Chipsets for PHYSICAL INTELLIGENCE",
+  tagline: "Custom FPGA chipsets for physical intelligence.",
+  thesis: "Custom FPGA chipsets for physical intelligence.",
   supporting:
     "Esthien Labs develops deterministic FPGA-based edge AI, sensor-fusion, and control architectures on the path to fabricated custom chipsets for assistive medical technology, prosthetics, automotive radar, and safety-critical embedded systems.",
+  description:
+    "Esthien Labs is a deep-tech company building FPGA-based edge AI, custom chipset architectures, bionic-arm control systems, prosthetics electronics, automotive radar, and safety-critical embedded hardware.",
+  aliases: [
+    "Esthien",
+    "Esthien Labs",
+    "Esthien Private Limited",
+    "Esthien Pvt Ltd",
+    "Esthien Labs Private Limited",
+    "Esthien Bionic Arms",
+    "Esthien Chipsets",
+    "Esthien FPGA Chipsets",
+  ],
+  seoKeywords: [
+    "Esthien",
+    "Esthien Labs",
+    "Esthien Private Limited",
+    "Esthien Pvt Ltd",
+    "Esthien bionic arms",
+    "Esthien chipsets",
+    "FPGA chipsets",
+    "FPGA class mobile grade chipsets",
+    "mobile-grade chipsets",
+    "custom silicon",
+    "physical intelligence",
+    "edge AI hardware",
+    "prosthetics control",
+    "automotive radar",
+  ],
   socialLinks: [
     {
       label: "LinkedIn",
@@ -257,6 +288,24 @@ export const projectDetails: DetailItem[] = [
     title: "Human Outcome",
     body: "The project stays tied to practical outcomes: safer vehicles, stronger assistive devices, steadier motion, and physical systems that improve human capability.",
     icon: ShieldCheck,
+  },
+];
+
+export const discoverySignals: DetailItem[] = [
+  {
+    title: "Company Identity",
+    body: "Esthien Labs is the public brand for Esthien, also searched as Esthien Private Limited, Esthien Pvt Ltd, and Esthien Labs Private Limited.",
+    icon: Search,
+  },
+  {
+    title: "Assistive Medical Systems",
+    body: "The medical lane covers bionic arms, prosthetics, joint assistance, mobility support, and control electronics for human-centered assistive devices.",
+    icon: HeartPulse,
+  },
+  {
+    title: "FPGA-Class Chipsets",
+    body: "The chipset lane covers FPGA chipsets, FPGA-class mobile-grade chipsets, sensor-fusion accelerators, edge AI processors, and future custom silicon.",
+    icon: Microchip,
   },
 ];
 
