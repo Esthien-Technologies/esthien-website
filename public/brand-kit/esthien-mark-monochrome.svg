@@ -1,12 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Esthien Labs mark">
-  <title>Esthien Labs mark</title>
-  <rect width="96" height="96" rx="18" fill="#FFFFFF"/>
-  
-  <path d="M13 18H26V78H13V18Z M26 18H52V31H26V18Z M26 41.5H48V54.5H26V41.5Z M26 65H52V78H26V65Z" fill="#000000"/>
-  <path d="M59 18H69V78H59V18Z" fill="#000000"/>
-  <path d="M74 18H84V78H74V18Z" fill="#000000"/>
-  <path d="M59 31H84M59 65H84" stroke="#FFFFFF" stroke-width="4"/>
-  <circle cx="64" cy="48" r="4.2" fill="#FFFFFF"/>
-  <circle cx="79" cy="48" r="4.2" fill="#FFFFFF"/>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_2004_21)">
+<path d="M70 2H442C479.555 2 510 32.4446 510 70V442C510 479.555 479.555 510 442 510H70C32.4446 510 2 479.555 2 442V70C2 32.4446 32.4446 2 70 2Z" stroke="black" stroke-width="4"/>
+<path d="M62 96H306.854V168.139H130.454V219.931H271.311V290.22H130.454V343.861H306.854V416H62V96Z" fill="black"/>
+<path d="M382.194 416H336.99V96H382.194V416ZM359.592 237.165C349.19 237.165 340.757 245.598 340.757 256C340.757 266.402 349.19 274.835 359.592 274.835C369.994 274.835 378.427 266.402 378.427 256C378.427 245.598 369.994 237.165 359.592 237.165Z" fill="black"/>
+<path d="M382.194 359.53H336.99V344.47H382.194V359.53ZM382.194 167.53H336.99V152.47H382.194V167.53Z" fill="white"/>
+<path d="M450 416H404.796V96H450V416ZM427.397 237.165C416.995 237.165 408.563 245.598 408.562 256C408.562 266.402 416.995 274.835 427.397 274.835C437.8 274.835 446.232 266.402 446.232 256C446.232 245.598 437.8 237.165 427.397 237.165Z" fill="black"/>
+<path d="M450 359.53H404.796V344.47H450V359.53ZM450 167.53H404.796V152.47H450V167.53Z" fill="white"/>
+</g>
+<defs>
+<clipPath id="clip0_2004_21">
+<rect width="512" height="512" fill="white"/>
+</clipPath>
+</defs>
 </svg>
