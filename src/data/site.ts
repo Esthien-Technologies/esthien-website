@@ -63,17 +63,18 @@ export type UseCase = {
 };
 
 export const site = {
-  name: "ESTHIEN LABS",
+  name: "Esthien Labs",
   shortName: "ESTHIEN LABS",
   legalName: "Esthien Labs Private Limited",
   domain: "www.esthien.com",
   email: "contact@esthien.com",
-  tagline: "Custom FPGA chipsets for physical intelligence.",
-  thesis: "Custom FPGA chipsets for physical intelligence.",
+  tagline: "Custom silicon for deterministic physical intelligence.",
+  lockupTagline: "CUSTOM SILICON FOR PHYSICAL INTELLIGENCE",
+  thesis: "Custom silicon for machines that must sense, decide, and act in real time.",
   supporting:
-    "Esthien Labs develops deterministic FPGA-based edge AI, sensor-fusion, and control architectures on the path to fabricated custom chipsets for assistive medical technology, prosthetics, automotive radar, and safety-critical embedded systems.",
+    "Esthien Labs is building FPGA-first edge AI architectures on the path to custom chipsets for assistive medical technology, prosthetics, automotive radar, and safety-critical embedded systems.",
   description:
-    "Esthien Labs is a deep-tech company building FPGA-based edge AI, custom chipset architectures, bionic-arm control systems, prosthetics electronics, automotive radar, and safety-critical embedded hardware.",
+    "Esthien Labs is a deep-tech semiconductor company building FPGA-first edge AI architectures and custom silicon for physical intelligence, bionic-arm control, prosthetics electronics, automotive radar, and safety-critical embedded systems.",
   aliases: [
     "Esthien",
     "Esthien Labs",
@@ -123,23 +124,64 @@ export const navItems: NavItem[] = [
 ];
 
 export const heroMetrics = [
-  { label: "Platform", value: "Custom Chipsets", note: "FPGA to specialized silicon" },
-  { label: "Markets", value: "Medical + Automotive", note: "Assistive devices, radar, safety systems" },
-  { label: "Execution", value: "Deterministic Edge AI", note: "Bounded timing on local hardware" },
+  { label: "Thesis", value: "FPGA-first silicon", note: "Prototype in reconfigurable logic, harden into custom IP" },
+  { label: "Wedge", value: "Medical + automotive", note: "Assistive devices, radar, ADAS, safety systems" },
+  { label: "Need", value: "Deterministic edge AI", note: "Bounded timing, local control, hardware-level trust" },
+];
+
+export const ventureSignals: DetailItem[] = [
+  {
+    title: "Clear Wedge",
+    body: "Start where latency and safety are non-negotiable: bionic-arm control, prosthetics electronics, automotive radar, and ADAS edge modules.",
+    icon: Crosshair,
+  },
+  {
+    title: "Platform Path",
+    body: "Use FPGA architectures to validate real workloads, then carry the proven logic toward custom silicon and reusable semiconductor IP.",
+    icon: Route,
+  },
+  {
+    title: "Defensible System Layer",
+    body: "The moat is not a website claim. It is timing behavior, sensor interfaces, control logic, safety paths, and hardware integration know-how.",
+    icon: ShieldCheck,
+  },
+  {
+    title: "Venture-Scale Direction",
+    body: "Physical AI needs specialized compute near sensors and actuators. Esthien is positioned around that shift from cloud intelligence to local hardware.",
+    icon: Activity,
+  },
+];
+
+export const buildRoadmap = [
+  {
+    label: "01",
+    title: "FPGA reference architectures",
+    body: "Develop deterministic pipelines for sensing, edge inference, control, and safety fallback.",
+  },
+  {
+    label: "02",
+    title: "Domain-specific validation",
+    body: "Prove the architecture in assistive medical systems and automotive sensing workloads.",
+  },
+  {
+    label: "03",
+    title: "Custom chipset path",
+    body: "Translate validated FPGA logic into specialized silicon blocks and long-term platform IP.",
+  },
 ];
 
 export const capabilities: Capability[] = [
   {
     title: "FPGA Chipset Architecture",
     description:
-      "Reconfigurable logic fabrics, SoC pathways, and edge accelerators built as a stepping stone toward fabricated custom silicon.",
+      "Reconfigurable logic fabrics, SoC pathways, and edge accelerators built as the first step toward fabricated custom silicon.",
     icon: CircuitBoard,
     signal: "Fabric",
   },
   {
     title: "Medical Assistive Systems",
     description:
-      "Custom control and compute blocks for bionic arms, prosthetic control, joint support, and mobility-assist medical devices.",
+      "Control and compute blocks for bionic arms, prosthetic control, joint support, and mobility-assist medical devices.",
     icon: HeartPulse,
     signal: "Human",
   },
@@ -185,7 +227,7 @@ export const identitySignals = [
   },
   {
     title: "Conduit",
-    body: "The visual language uses controlled channels to express low-latency translation from intent to physical response.",
+    body: "The visual language uses controlled channels to express low-latency movement from signal to physical response.",
     icon: Waypoints,
   },
   {
@@ -224,7 +266,7 @@ export const thesisChain = [
 export const doctrine = [
   {
     title: "Capability before spectacle",
-    body: "The goal is not to decorate machines with intelligence. The goal is to make physical systems more useful, safer, steadier, and more capable for people.",
+    body: "The goal is to make physical systems more useful, safer, steadier, and more capable for people.",
     icon: Crosshair,
   },
   {
@@ -276,12 +318,12 @@ export const contactRoutes = [
 export const projectDetails: DetailItem[] = [
   {
     title: "Institution First",
-    body: "Esthien Labs is being built as a long-term deep-tech institution, broad enough for medical devices, automotive sensing, embedded AI, and semiconductor work without being trapped by one early product.",
+    body: "Esthien Labs is being built as a long-term deep-tech company, broad enough for medical devices, automotive sensing, embedded AI, and semiconductor work without being trapped by one early product.",
     icon: Blocks,
   },
   {
     title: "Chipset Center",
-    body: "The technical center is FPGA-based edge intelligence today and custom chipset fabrication over time: hardware close to sensors and actuators, built for deterministic timing rather than cloud-dependent response.",
+    body: "The technical center is FPGA-based edge intelligence today and custom silicon over time: hardware close to sensors and actuators, built for deterministic timing rather than cloud-dependent response.",
     icon: Microchip,
   },
   {
