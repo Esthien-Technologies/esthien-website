@@ -233,6 +233,12 @@ strong {
   overflow: visible;
 }
 
+.brand-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 .brand-chip-outline,
 .brand-chip-trace {
   stroke: var(--logo-ink);
@@ -286,14 +292,6 @@ strong {
   display: block;
   font-size: 14px;
   letter-spacing: 0;
-}
-
-.brand-lockup small {
-  display: block;
-  color: var(--muted);
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.12em;
 }
 
 .desktop-nav {
@@ -961,6 +959,7 @@ strong {
 .detail-card,
 .focus-panel,
 .reason-card,
+.venture-card,
 .thesis-step {
   position: relative;
   border: 1px solid var(--border-soft);
@@ -1273,7 +1272,8 @@ strong {
 }
 
 .detail-grid,
-.reason-grid {
+.reason-grid,
+.venture-grid {
   display: grid;
   gap: 14px;
   margin-top: 42px;
@@ -1287,8 +1287,13 @@ strong {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.venture-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .detail-card,
-.reason-card {
+.reason-card,
+.venture-card {
   min-height: 250px;
   padding: 24px;
   overflow: hidden;
@@ -1299,7 +1304,8 @@ strong {
 }
 
 .detail-card:hover,
-.reason-card:hover {
+.reason-card:hover,
+.venture-card:hover {
   border-color: rgba(76, 201, 240, 0.34);
   background: var(--panel-bg-strong);
   transform: translateY(-4px);
@@ -1311,6 +1317,50 @@ strong {
 
 .reason-card svg {
   color: var(--accent);
+}
+
+.venture-card svg {
+  color: var(--brass);
+}
+
+.venture-card h3,
+.roadmap-step h3 {
+  margin: 52px 0 0;
+  font-size: 22px;
+  line-height: 1.08;
+}
+
+.venture-card p,
+.roadmap-step p {
+  margin: 14px 0 0;
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.roadmap-stack {
+  display: grid;
+  gap: 12px;
+}
+
+.roadmap-step {
+  position: relative;
+  min-height: 150px;
+  padding: 22px;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--squircle-lg);
+  background: var(--panel-bg);
+}
+
+.roadmap-step span {
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.roadmap-step h3 {
+  margin-top: 22px;
 }
 
 .identity-grid {
@@ -1697,6 +1747,16 @@ strong {
   display: block;
 }
 
+.footer-brand small {
+  display: block;
+  margin-top: 3px;
+  color: var(--subtle);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .footer-brand p {
   max-width: 300px;
   margin: 10px 0 0;
@@ -1977,6 +2037,116 @@ strong {
   text-transform: uppercase;
 }
 
+.admin-page {
+  min-height: 100vh;
+  padding: calc(var(--nav-height) + 92px) 0 96px;
+}
+
+.admin-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.95fr) minmax(320px, 0.72fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.admin-unlock,
+.admin-editor,
+.admin-preview {
+  border: 1px solid var(--border);
+  border-radius: var(--squircle-xl);
+  background: var(--panel-bg-strong);
+  box-shadow: var(--shadow);
+}
+
+.admin-unlock {
+  max-width: 520px;
+  padding: 30px;
+}
+
+.admin-unlock h1,
+.admin-editor h1 {
+  margin: 16px 0 24px;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 0.98;
+}
+
+.admin-editor,
+.admin-preview {
+  padding: 26px;
+}
+
+.admin-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
+  color: var(--logic);
+  font-size: 13px;
+}
+
+.admin-editor label,
+.admin-unlock label {
+  display: grid;
+  gap: 7px;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.admin-editor input,
+.admin-editor textarea,
+.admin-unlock input {
+  width: 100%;
+  border: 1px solid var(--border-strong-ui);
+  border-radius: var(--squircle-sm);
+  background: var(--deep-bg-strong);
+  color: var(--text);
+  padding: 12px 13px;
+}
+
+.admin-editor textarea {
+  min-height: 105px;
+  resize: vertical;
+}
+
+.admin-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.admin-preview {
+  position: sticky;
+  top: 112px;
+}
+
+.admin-preview > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.admin-preview h2 {
+  margin: 26px 0 16px;
+  font-size: clamp(26px, 3vw, 42px);
+  line-height: 1.05;
+}
+
+.admin-preview pre {
+  white-space: pre-wrap;
+  color: var(--muted);
+  font-family: var(--font-sans);
+  line-height: 1.68;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -2065,6 +2235,7 @@ strong {
   .detail-grid,
   .principle-grid,
   .reason-grid,
+  .venture-grid,
   .thesis-chain,
   .identity-grid,
   .matrix-grid,
@@ -2104,10 +2275,6 @@ strong {
   .nav-shell {
     top: 10px;
     width: min(calc(100% - 20px), var(--max-width));
-  }
-
-  .brand-lockup small {
-    display: none;
   }
 
   .section-inner,
@@ -2248,6 +2415,7 @@ strong {
   .detail-grid,
   .principle-grid,
   .reason-grid,
+  .venture-grid,
   .thesis-chain,
   .identity-grid,
   .matrix-grid,
@@ -2259,12 +2427,13 @@ strong {
   .capability-card,
   .capability-card--large,
   .detail-card,
-  .reason-card {
+  .reason-card,
+  .venture-card {
     min-height: auto;
   }
 
   .mobile-secondary-section {
-    display: none;
+    display: block;
   }
 
   .focus-tabs {
@@ -2295,7 +2464,8 @@ strong {
 
   .footer-bottom,
   .contact-actions,
-  .hero-actions {
+  .hero-actions,
+  .admin-actions {
     align-items: stretch;
     flex-direction: column;
   }
@@ -2303,6 +2473,18 @@ strong {
   .primary-button,
   .secondary-button {
     width: 100%;
+  }
+
+  .admin-page {
+    padding: 118px 0 70px;
+  }
+
+  .admin-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-preview {
+    position: static;
   }
 
   .footer-bottom {

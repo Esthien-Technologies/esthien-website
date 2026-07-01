@@ -9,24 +9,25 @@ import Capabilities from "./pages/Capabilities";
 import Contact from "./pages/Contact";
 import ErrorPage from "./pages/ErrorPage";
 import Home from "./pages/Home";
+import NewsletterAdmin from "./pages/NewsletterAdmin";
 import SecurityAlert from "./pages/SecurityAlert";
 import Vision from "./pages/Vision";
 
 const pageMeta: Record<string, { title: string; description: string }> = {
   "/": {
-    title: "Esthien Labs | Custom FPGA Chipsets for Physical Intelligence",
+    title: "Esthien Labs | FPGA-First Custom Silicon for Physical AI",
     description:
-      "Esthien Labs builds custom FPGA chipsets, edge AI hardware, bionic-arm control systems, prosthetics electronics, automotive radar, ADAS, and safety-critical embedded systems.",
+      "Esthien Labs, the public identity of Esthien Pvt Ltd, builds FPGA-first custom silicon, edge AI hardware, bionic-arm control, prosthetics electronics, automotive radar, ADAS, and safety-critical embedded systems.",
   },
   "/about": {
     title: "About Esthien Labs | FPGA Chipsets and Physical Intelligence",
     description:
-      "Esthien Labs is a deep-tech company focused on FPGA-based chipsets, custom silicon paths, edge AI, control systems, medical assistive devices, and automotive sensing.",
+      "Esthien Labs is the public identity of Esthien Pvt Ltd, a deep-tech company focused on FPGA-first custom silicon, edge AI, medical assistive devices, and automotive sensing.",
   },
   "/vision": {
-    title: "Esthien Labs Vision | Custom Chipsets for Physical AI",
+    title: "Esthien Labs Vision | Custom Silicon for Physical Intelligence",
     description:
-      "The Esthien Labs vision is to develop FPGA-based edge AI and custom chipsets that improve safety, capability, and reliability in medical and automotive systems.",
+      "The Esthien Labs vision is to validate FPGA-first edge AI architectures and move proven logic toward custom chipsets for medical and automotive systems.",
   },
   "/capabilities": {
     title: "Esthien Labs Capabilities | FPGA, Edge AI, Bionic Arms, Radar",
@@ -37,6 +38,10 @@ const pageMeta: Record<string, { title: string; description: string }> = {
     title: "Contact Esthien Labs | Partnerships and Technical Inquiries",
     description:
       "Contact Esthien Labs for partnerships, collaborations, investors, customers, assistive medical systems, automotive sensing, FPGA chipsets, and edge AI hardware.",
+  },
+  "/admin/newsletter": {
+    title: "Newsletter Console | Esthien Labs",
+    description: "Internal Esthien Labs newsletter draft console.",
   },
 };
 
@@ -52,6 +57,11 @@ export default function App() {
     if (description) {
       description.content = meta.description;
     }
+
+    const robots = document.querySelector<HTMLMetaElement>('meta[name="robots"]');
+    if (robots) {
+      robots.content = location.pathname.startsWith("/admin") ? "noindex, nofollow" : "index, follow";
+    }
   }, [location.pathname]);
 
   return (
@@ -65,6 +75,7 @@ export default function App() {
           <Route path="/vision" element={<Vision />} />
           <Route path="/capabilities" element={<Capabilities />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/admin/newsletter" element={<NewsletterAdmin />} />
           <Route path="/error" element={<ErrorPage code="500" title="Something slipped out of phase." body="The site reached a safe fallback state. Try the previous page or return home." />} />
           <Route path="/security-alert" element={<SecurityAlert />} />
           <Route path="/system-lockdown" element={<SecurityAlert />} />

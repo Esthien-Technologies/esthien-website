@@ -4,13 +4,13 @@ Prepared: 29 June 2026
 
 ## Goal
 
-Make Esthien easier to discover for searches around Esthien, Esthien Labs, Esthien Private Limited, FPGA chipsets, FPGA-class mobile-grade chipsets, bionic arms, prosthetics electronics, edge AI hardware, automotive radar, and physical intelligence.
+Make Esthien easier to discover for searches around Esthien, Esthien Labs, Esthien Pvt Ltd, Esthien PVT LTD, Esthien Private Limited, FPGA chipsets, FPGA-first custom silicon, FPGA-class mobile-grade chipsets, bionic arms, prosthetics electronics, edge AI hardware, automotive radar, and physical intelligence.
 
 No one can honestly guarantee a top Google ranking. The practical goal is to make the website authoritative, crawlable, technically fast, and supported by real third-party references. Avoid hidden keyword stuffing because it can hurt ranking and trust.
 
 ## 0-30 Days: Foundation
 
-1. Confirm one official public name and use it consistently: Esthien Labs or Esthien Labs Private Limited.
+1. Use one public brand and registered name consistently: Esthien Labs as the public brand and Esthien Pvt Ltd as the registered name.
 2. Add the confirmed legal name, CIN, registered office, founder names, and official contact email once available.
 3. Publish the final domain as `https://www.esthien.com/` and keep all sitemap/canonical URLs consistent.
 4. Submit `sitemap.xml` in Google Search Console and Bing Webmaster Tools.
@@ -73,4 +73,3 @@ No one can honestly guarantee a top Google ranking. The practical goal is to mak
 5. Contact button clicks and email inquiries.
 6. LinkedIn followers, post reach, and profile visits.
 7. Download counts for company profile and technical briefs.
-

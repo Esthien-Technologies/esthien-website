@@ -19,7 +19,6 @@ export default function Navigation() {
         <BrandMark />
         <span>
           <strong>{site.shortName}</strong>
-          <small>CUSTOM FPGA CHIPSETS</small>
         </span>
       </Link>
 

@@ -11,7 +11,8 @@ export default function Footer() {
           <BrandMark />
           <div>
             <strong>{site.name}</strong>
-            <p>{site.tagline} Medical devices, bionic arms, prosthetics, automotive radar, and edge AI hardware.</p>
+            <small>({site.legalName})</small>
+            <p>{site.tagline} Assistive medical systems, bionic arms, prosthetics electronics, automotive radar, ADAS, and edge AI hardware.</p>
           </div>
         </div>
 
@@ -46,7 +47,7 @@ export default function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <span>&copy; {new Date().getFullYear()} {site.name}. All rights reserved.</span>
+        <span>&copy; {new Date().getFullYear()} {site.legalName}. All rights reserved.</span>
         <span>{site.domain}</span>
       </div>
     </footer>

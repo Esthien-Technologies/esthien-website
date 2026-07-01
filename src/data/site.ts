@@ -65,7 +65,7 @@ export type UseCase = {
 export const site = {
   name: "Esthien Labs",
   shortName: "ESTHIEN LABS",
-  legalName: "Esthien Labs Private Limited",
+  legalName: "Esthien Pvt Ltd",
   domain: "www.esthien.com",
   email: "contact@esthien.com",
   tagline: "Custom silicon for deterministic physical intelligence.",
@@ -80,6 +80,7 @@ export const site = {
     "Esthien Labs",
     "Esthien Private Limited",
     "Esthien Pvt Ltd",
+    "Esthien PVT LTD",
     "Esthien Labs Private Limited",
     "Esthien Bionic Arms",
     "Esthien Chipsets",
@@ -335,8 +336,8 @@ export const projectDetails: DetailItem[] = [
 
 export const discoverySignals: DetailItem[] = [
   {
-    title: "Company Identity",
-    body: "Esthien Labs is the public brand for Esthien, also searched as Esthien Private Limited, Esthien Pvt Ltd, and Esthien Labs Private Limited.",
+    title: "Registered Identity",
+    body: "Esthien Labs is the public brand for searches around Esthien, Esthien Labs, Esthien chipsets, and Esthien bionic arms.",
     icon: Search,
   },
   {

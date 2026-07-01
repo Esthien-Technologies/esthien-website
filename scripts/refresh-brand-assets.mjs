@@ -23,8 +23,8 @@ const colors = {
   outer: "#1E1E1E",
 };
 
-const tagline = "CUSTOM FPGA CHIPSETS FOR PHYSICAL INTELLIGENCE";
-const taglineSentence = "Custom FPGA chipsets for physical intelligence.";
+const tagline = "CUSTOM SILICON FOR PHYSICAL INTELLIGENCE";
+const taglineSentence = "Custom silicon for deterministic physical intelligence.";
 
 const ePath96 =
   "M13 18H26V78H13V18Z M26 18H52V31H26V18Z M26 41.5H48V54.5H26V41.5Z M26 65H52V78H26V65Z";

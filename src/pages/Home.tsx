@@ -7,6 +7,7 @@ import SectionHeading from "../components/SectionHeading";
 import SignalDiagram from "../components/SignalDiagram";
 import {
   capabilities,
+  buildRoadmap,
   chipsetReasons,
   discoverySignals,
   doctrine,
@@ -15,6 +16,7 @@ import {
   identitySignals,
   site,
   thesisChain,
+  ventureSignals,
 } from "../data/site";
 
 export default function Home() {
@@ -70,8 +72,8 @@ export default function Home() {
         <div className="section-inner split-layout">
           <SectionHeading
             eyebrow="Company"
-            title="Custom chipsets for intelligence that has to run on device."
-            body="ESTHIEN LABS is a deep-tech company focused on FPGA-based chipset architectures, deterministic control, and edge AI for assistive medical devices, prosthetics, automotive radar, and vehicle safety systems."
+            title="A venture-scale semiconductor company for physical AI."
+            body="Esthien Labs is focused on FPGA-first custom silicon, deterministic control, and edge AI for assistive medical devices, prosthetics, automotive radar, and vehicle safety systems."
           />
           <div className="statement-panel" data-reveal>
             <p>
@@ -85,11 +87,52 @@ export default function Home() {
       </section>
 
       <section className="section section-muted">
+        <div className="section-inner">
+          <SectionHeading
+            eyebrow="Investor Signal"
+            title="The opportunity is specialized compute at the edge of the physical world."
+            body="Cloud AI made intelligence visible. Physical AI needs hardware that can respond locally, predictably, and safely. Esthien is building toward that semiconductor layer."
+          />
+          <div className="venture-grid">
+            {ventureSignals.map((item) => {
+              const Icon = item.icon;
+              return (
+                <article className="venture-card" key={item.title} data-reveal>
+                  <Icon size={22} />
+                  <h3>{item.title}</h3>
+                  <p>{item.body}</p>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="section">
         <div className="section-inner split-layout split-layout--wide">
           <SectionHeading
-            eyebrow="Project"
-            title="A focused chipset company for medical and automotive systems."
-            body="The technical center is clear: begin with FPGA concepts, prove deterministic edge intelligence close to sensors, then move toward custom silicon where timing, safety, and reliability justify fabrication."
+            eyebrow="Build Path"
+            title="From FPGA proof to custom silicon IP."
+            body="The near-term path is deliberate: validate deterministic logic on FPGA hardware, prove domain value in medical and automotive workloads, then harden the architecture into custom silicon."
+          />
+          <div className="roadmap-stack" data-reveal>
+            {buildRoadmap.map((item) => (
+              <article className="roadmap-step" key={item.label}>
+                <span>{item.label}</span>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-muted">
+        <div className="section-inner split-layout split-layout--wide">
+          <SectionHeading
+            eyebrow="Markets"
+            title="Medical and automotive are the first timing-critical wedges."
+            body="The same architecture logic applies where sensors, control, and safety cannot wait for cloud round trips."
           />
           <ProjectFocus />
         </div>
@@ -98,9 +141,9 @@ export default function Home() {
       <section className="section">
         <div className="section-inner">
           <SectionHeading
-            eyebrow="Company Profile"
-            title="A searchable identity for chipsets, bionic arms, and edge AI hardware."
-            body="The public profile uses plain, crawlable language around Esthien Labs, FPGA chipsets, assistive medical systems, automotive radar, and the path from reconfigurable hardware to custom silicon."
+            eyebrow="Search Footprint"
+            title="Indexed for the language customers, investors, and partners actually search."
+            body="The site uses visible, crawlable language around Esthien Labs, FPGA chipsets, bionic arms, prosthetics electronics, automotive radar, ADAS, and edge AI hardware."
           />
           <div className="detail-grid">
             {discoverySignals.map((item) => {
@@ -191,9 +234,9 @@ export default function Home() {
       <section className="section section-muted mobile-secondary-section">
         <div className="section-inner doctrine-layout">
           <SectionHeading
-            eyebrow="Doctrine"
-            title="Aspirational, but not theatrical."
-            body="The archive is clear about the tone: build toward a long-lived institution, speak precisely, and let the technology earn the story."
+            eyebrow="Engineering Posture"
+            title="Precise claims. Harder systems. Real proof over time."
+            body="The site is designed to leave room for prototype notes, technical briefs, partner updates, and investor materials as the company earns public depth."
           />
           <div className="doctrine-list">
             {doctrine.map((item) => {
@@ -251,7 +294,7 @@ export default function Home() {
             <span className="eyebrow">Future Room</span>
             <h2>Built to expand without changing the center.</h2>
             <p>
-              ESTHIEN LABS can grow into specialized programs while the public brand
+              Esthien Labs can grow into specialized programs while the public brand
               remains simple: intelligence for physical systems, measured by
               human capability and real-world reliability.
             </p>

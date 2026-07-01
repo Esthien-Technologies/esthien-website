@@ -9,7 +9,7 @@ export default function Capabilities() {
     <>
       <PageHero
         eyebrow="Capabilities"
-        title="A technical stack for custom AI chipsets."
+        title="A technical stack for FPGA-first custom silicon."
         body="The company works across FPGA chipset architecture, edge AI, control systems, embedded hardware, assistive medical devices, and automotive sensing without reducing the work to one narrow product label."
       />
 

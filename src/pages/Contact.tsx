@@ -22,7 +22,7 @@ export default function Contact() {
       <PageHero
         eyebrow="Contact"
         title="Start with a direct company email."
-        body="For partnerships, collaborations, investors, customers, medical assistive systems, automotive sensing, and technical conversations, use the official ESTHIEN LABS contact point."
+        body="For partnerships, collaborations, investors, customers, medical assistive systems, automotive sensing, and technical conversations, use the official Esthien Labs contact point."
       />
 
       <section className="section">
@@ -37,7 +37,7 @@ export default function Contact() {
             <div className="contact-actions">
               <a className="primary-button" href={`mailto:${site.email}`}>
                 <Mail size={18} />
-                Email ESTHIEN LABS
+                Email Esthien Labs
               </a>
               <button className="secondary-button" type="button" onClick={copyEmail}>
                 <Copy size={17} />

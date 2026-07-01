@@ -285,7 +285,7 @@ def add_cover(doc: Document, title: str, subtitle: str, classification: str):
     add_label_table(
         doc,
         [
-            ("Company", "Esthien Labs / Esthien Labs Private Limited [confirm exact legal name and CIN]"),
+            ("Company", "Esthien Labs / Esthien Pvt Ltd [confirm exact legal name and CIN]"),
             ("Classification", classification),
             ("Use", "Internal drafting, legal review, HR setup, board review, investor preparation"),
             ("Date", "Prepared on 29 June 2026"),
@@ -333,7 +333,7 @@ TEMPLATES = [
         "purpose": "Create the first operating record after incorporation and prevent missing statutory basics.",
         "sections": template_paragraphs([
             ("Template", [
-                "Company legal name: [Esthien Labs Private Limited]. CIN: [insert]. Registered office: [insert].",
+                "Company legal name: [Esthien Pvt Ltd]. CIN: [insert]. Registered office: [insert].",
                 "Prepare and maintain statutory registers, certificate of incorporation, PAN/TAN/GST records if applicable, common seal policy if adopted, digital signature records, board file, shareholder file, contracts file, employment file, and IP assignment file.",
                 "Confirm first board meeting date and first set of board resolutions. Maintain signed attendance, notice, agenda, minutes, and resolutions in one indexed folder.",
             ]),
@@ -846,7 +846,9 @@ def add_letterhead_header(doc: Document, title: str):
         p.add_run("  ")
     run = p.add_run("ESTHIEN LABS")
     set_font(run, 9, BLACK, True)
-    run = p.add_run("\n  CUSTOM FPGA CHIPSETS FOR PHYSICAL INTELLIGENCE")
+    run = p.add_run("\n  ESTHIEN PVT LTD")
+    set_font(run, 6.8, MUTED, True)
+    run = p.add_run("\n  CUSTOM SILICON FOR PHYSICAL INTELLIGENCE")
     set_font(run, 6.8, MUTED)
     paragraph_border_bottom(p, "2B373D", "5", "6")
     footer = section.footer
@@ -854,7 +856,7 @@ def add_letterhead_header(doc: Document, title: str):
     fp = footer.paragraphs[0]
     clear_paragraph(fp)
     fp.alignment = WD_ALIGN_PARAGRAPH.CENTER
-    run = fp.add_run("Esthien Labs | www.esthien.com | contact@esthien.com | [Registered Office Address] | CIN: [insert]")
+    run = fp.add_run("Esthien Pvt Ltd | Esthien Labs | www.esthien.com | contact@esthien.com | [Registered Office Address] | CIN: [insert]")
     set_font(run, 8, MUTED)
 
 
@@ -867,7 +869,7 @@ def add_letter_template(doc: Document, title: str, rows: list[tuple[str, str]], 
     for para in body:
         add_p(doc, para, size=10.5)
     add_p(doc, "Sincerely,", size=10.5, after=18)
-    add_p(doc, "[Authorized Signatory]\nEsthien Labs", size=10.5)
+    add_p(doc, "[Authorized Signatory]\nEsthien Pvt Ltd\nEsthien Labs", size=10.5)
 
 
 def build_letterhead_pack():

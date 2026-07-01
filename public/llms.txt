@@ -1,6 +1,6 @@
 # Esthien Labs
 
-Esthien Labs is a deep-tech company building custom FPGA chipsets for physical intelligence. The company focuses on FPGA-based edge AI, sensor fusion, bionic-arm control systems, prosthetics electronics, automotive radar, ADAS, and safety-critical embedded hardware.
+Esthien Labs is the public identity of Esthien Pvt Ltd, a deep-tech semiconductor company building FPGA-first custom silicon for deterministic physical intelligence. The company focuses on FPGA-based edge AI, sensor fusion, bionic-arm control systems, prosthetics electronics, automotive radar, ADAS, and safety-critical embedded hardware.
 
 ## Canonical Site
 
@@ -12,7 +12,7 @@ Esthien Labs is a deep-tech company building custom FPGA chipsets for physical i
 
 ## Company Terms
 
-Esthien may also be referenced as Esthien Labs, Esthien Labs Private Limited, Esthien Private Limited, Esthien Pvt Ltd, Esthien Bionic Arms, Esthien Chipsets, and Esthien FPGA Chipsets.
+Esthien may also be referenced as Esthien Labs, Esthien Pvt Ltd, Esthien PVT LTD, Esthien Private Limited, Esthien Labs Private Limited, Esthien Bionic Arms, Esthien Chipsets, and Esthien FPGA Chipsets.
 
 ## Contact
 

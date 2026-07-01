@@ -1,9 +1,15 @@
-<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="512" height="512" fill="#0A0D10"/>
-<path d="M400 48H112C76.6538 48 48 76.6538 48 112V400C48 435.346 76.6538 464 112 464H400C435.346 464 464 435.346 464 400V112C464 76.6538 435.346 48 400 48Z" fill="#11181C" stroke="#CBD5D8" stroke-width="8"/>
-<path d="M99 126H297.786V184.613H154.575V226.694H268.93V283.803H154.575V327.387H297.786V386H99V126Z" fill="#F8FAF9"/>
-<path d="M358.951 386H322.252V126H358.951V386ZM340.602 240.709C332.156 240.709 325.311 247.555 325.311 256C325.311 264.445 332.156 271.291 340.602 271.291C349.047 271.291 355.893 264.445 355.893 256C355.893 247.555 349.047 240.709 340.602 240.709Z" fill="#32D69A"/>
-<path d="M358.951 340.118H322.252V327.882H358.951V340.118ZM358.951 184.118H322.252V171.882H358.951V184.118Z" fill="#CBD5D8"/>
-<path d="M414 386H377.301V126H414V386ZM395.65 240.709C387.205 240.709 380.359 247.555 380.359 256C380.359 264.445 387.205 271.291 395.65 271.291C404.095 271.291 410.941 264.445 410.941 256C410.941 247.555 404.095 240.709 395.65 240.709Z" fill="#4CC9F0"/>
-<path d="M414 340.117H377.301V327.883H414V340.117ZM414 184.117H377.301V171.883H414V184.117Z" fill="#CBD5D8"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Esthien Labs social avatar">
+  <title>Esthien Labs social avatar</title>
+  <rect width="512" height="512" rx="18" fill="#0A0D10"/>
+  <rect x="48" y="48" width="416" height="416" rx="64" fill="#11181C" stroke="#CBD5D8" stroke-width="8"/>
+  <g transform="translate(91 112) scale(3)">
+    
+  <path d="M13 18H26V78H13V18Z M26 18H52V31H26V18Z M26 41.5H48V54.5H26V41.5Z M26 65H52V78H26V65Z" fill="#F8FAF9"/>
+  <path d="M59 18H69V78H59V18Z" fill="#32D69A"/>
+  <path d="M74 18H84V78H74V18Z" fill="#4CC9F0"/>
+  <path d="M59 31H84M59 65H84" stroke="#263239" stroke-width="4"/>
+  <circle cx="64" cy="48" r="4.2" fill="#0A0D10"/>
+  <circle cx="79" cy="48" r="4.2" fill="#0A0D10"/>
+  </g>
 </svg>

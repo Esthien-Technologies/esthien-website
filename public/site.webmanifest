@@ -1,10 +1,11 @@
 {
   "name": "Esthien Labs",
   "short_name": "Esthien Labs",
+  "description": "FPGA-first custom silicon for deterministic physical intelligence.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#050608",
-  "theme_color": "#050608",
+  "background_color": "#F8FAF9",
+  "theme_color": "#F8FAF9",
   "icons": [
     {
       "src": "/esthien-mark.svg",

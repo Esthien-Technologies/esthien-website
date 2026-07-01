@@ -1,6 +1,6 @@
 # Esthien Labs Brand Kit
 
-Selected direction: Silicon Strata, refreshed with a more linear E mark.
+Selected direction: Silicon Strata, refreshed with a more linear E mark and registered company-name support.
 
 ## Files
 
@@ -16,9 +16,9 @@ Selected direction: Silicon Strata, refreshed with a more linear E mark.
 
 ## Tagline
 
-Custom FPGA chipsets for physical intelligence.
+Custom silicon for deterministic physical intelligence.
 
-Use the tagline in title case in prose and as `CUSTOM FPGA CHIPSETS FOR PHYSICAL INTELLIGENCE` in logo lockups or compact identity applications.
+Use the tagline in title case in prose and as `CUSTOM SILICON FOR PHYSICAL INTELLIGENCE` in logo lockups or compact identity applications. Use `(ESTHIEN PVT LTD)` as the legal identity line where space allows.
 
 ## Color Tokens
 

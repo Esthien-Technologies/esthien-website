@@ -14,8 +14,8 @@ export default function Vision() {
     <>
       <PageHero
         eyebrow="Vision"
-        title="Building custom chipsets for physical AI."
-        body="The company vision is broad enough to last and specific enough to guide work: develop FPGA-based edge AI and fabricate custom chipsets that improve safety, capability, and reliability in medical and automotive systems."
+        title="Custom silicon for deterministic physical intelligence."
+        body="The company vision is broad enough to last and specific enough to guide work: validate FPGA-first edge AI architectures, then move proven logic toward custom chipsets that improve safety, capability, and reliability in medical and automotive systems."
       />
 
       <section className="section">

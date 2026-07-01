@@ -8,7 +8,7 @@ export default function About() {
       <PageHero
         eyebrow="About"
         title="An institution for custom intelligence hardware."
-        body="ESTHIEN LABS is being built around FPGA-based chipsets, custom silicon paths, edge AI, control systems, and the discipline required to make medical and automotive systems act with trust."
+        body="Esthien Labs is built around FPGA-first custom silicon, edge AI, control systems, and the discipline required to make medical and automotive systems act with trust."
       />
 
       <section className="section">
@@ -20,13 +20,13 @@ export default function About() {
           />
           <div className="copy-stack" data-reveal>
             <p>
-              ESTHIEN LABS is focused on the systems layer where intelligence
+              Esthien Labs is focused on the systems layer where intelligence
               becomes physical: FPGA logic, sensor pipelines, embedded computation,
               real-time decision loops, hardware architecture, and the control logic
               that makes medical and automotive systems respond precisely.
             </p>
             <p>
-              Esthien Labs is a coined institutional name shaped by the ideas of perception and
+              Esthien Labs is a coined institutional brand shaped by the ideas of perception and
               intellect. It stays abstract on purpose, so the institution can
               grow across physical AI, embedded intelligence, medical systems,
               vehicle sensing, mobility, safety, and semiconductor work without being

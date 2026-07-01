@@ -1,5 +1,5 @@
 /*
-  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com 'sha256-s8k0fGNIrcmN6U73WZ0uuMW9FHeorn8lnkQedBb4K9U=' 'sha256-YZ8WflG6nnA88RT6VUyhWuu5P5p4M6rSpCCbK19lIKM='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; style-src-attr 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:; frame-ancestors 'none'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests
+  Content-Security-Policy: default-src 'self'; script-src 'self' https://static.cloudflareinsights.com 'sha256-+K3RXKm2stBvB3SBSwzq0RQtxyMPK0pPAQFQ+eNhVGs=' 'sha256-CZDJQO/XcqaXFYtKndKdFbOYvwsdfJ0MGW10rGFw+Dk='; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; style-src-attr 'unsafe-inline'; font-src 'self'; img-src 'self' data:; connect-src 'self' https://cloudflareinsights.com; media-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self' mailto:; frame-ancestors 'none'; manifest-src 'self'; worker-src 'self'; upgrade-insecure-requests
   Referrer-Policy: strict-origin-when-cross-origin
   X-Content-Type-Options: nosniff
   X-Frame-Options: DENY
@@ -9,3 +9,7 @@
   Cross-Origin-Resource-Policy: same-origin
   Origin-Agent-Cluster: ?1
   Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+
+/admin/*
+  X-Robots-Tag: noindex, nofollow
+  Cache-Control: no-store

@@ -7,7 +7,7 @@ const storageKey = "esthien-theme";
 
 function getInitialTheme(): ThemeMode {
   if (typeof window === "undefined") {
-    return "dark";
+    return "light";
   }
 
   try {
@@ -16,10 +16,10 @@ function getInitialTheme(): ThemeMode {
       return stored;
     }
   } catch {
-    return "dark";
+    return "light";
   }
 
-  return window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+  return "light";
 }
 
 export default function ThemeToggle() {
